@@ -1,0 +1,6 @@
+Features: db Tables
+BNF Code, prescribing measure: tpdpi_bnft, (e.g. t201910pdpi_bnft)
+gender: gender_age_2018_2019
+age_group: gender_age_2018_2019
+prevalence_indications: prevalence_2018_2019 deprivation: deprivation_2019
+location data: practices_locations
