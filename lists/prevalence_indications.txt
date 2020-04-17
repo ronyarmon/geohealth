@@ -1,4 +1,3 @@
-Ignore
 AF-Atrial_Fibrillation
 CHD-Coronary_Heart_Disease
 CVD-PP-Cardiovascular_Disease-Primary_Prevention_(30-74)
