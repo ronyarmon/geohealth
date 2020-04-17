@@ -7,7 +7,7 @@ style = {'description_width': 'initial'}
 features_layout = {'width': 'max-content','height':'200px'}
 age_groups_layout = {'width': '20px','height':'200px'}
 measures_layout = {'width': 'max-content','height':'30px'}
-lists_dir='/Users/rony/Projects/Health_Geo_app/lists/'
+lists_dir='./lists/'
 
 
 ''' Features '''

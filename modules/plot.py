@@ -14,7 +14,7 @@ from bokeh.models import Dropdown, Panel
 from bokeh.layouts import column, row, WidgetBox, layout
 
 # lists of geo values
-lists_dir_path='/Users/rony/Projects/Health_Geo_app/lists/'
+lists_dir_path='./lists/'
 ccgs,regions,sub_regions=[],[],[]
 ccgs = open (lists_dir_path+'ccg.txt').read().split('\n')[:-1]
 ccgs = ['All']+ccgs
