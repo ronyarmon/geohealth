@@ -1,97 +1,61 @@
-def build_statements(features,measures,period):
-    default='Ignore'
-    features_default_count=list(features.values()).count(default)
+class statement:
 
-    #print (bnf_code_dd,prescribing_measures_dd)
-    if ((features['prescribing']!=default) & (measures['prescribing']==default))\
-    | ((features['prevalence']!=default) & (measures['prevalence']==default)):
-        print('You selected a prevalence feature without a measure.\
-        Re-run to select both')
+    # build statements using features' info contained in df
+    def __init__(self,feature,df):
+        self.value = df.loc[feature,'value']+('zzzzz',)
+        self.table = df.loc[feature,'table']
+        self.value_header = df.loc[feature,'value_header']
+        self.measure_header = df.loc[feature,'measure_header']
 
-    elif features_default_count < 3:
-        print ('Please select no more than 2 features to plot')
+    def select (self,feature):
+        statement_select="SELECT practice_code,sum({vm}) FROM {t}"\
+                .format (vm=self.measure_header, t=self.table)
+        return statement_select
 
-    # Collect the dd value (v) with the relevant measure (m) table (t) and column
-    # headers for the value (vc) and measure (mc)
-    else:
-        statements={}
+    def where (self,feature):
+        if feature == 'prescribing':
+            statement_where = ''
+        else:
+            statement_where="WHERE {vh} in {v}".format(v=self.value,vh=self.value_header)
+        return statement_where
 
-        # prescribing
-        if features['prescribing']!=default:
-            bnf_code=features['prescribing'].split(':')[0]
+    def groupby (self,feature):
+        if feature == 'prescribing':
+            bnf_sections = []
+            for item in  self.value:
+                bnf_section = '^{i}'.format(i=item.split(':')[0])
+                bnf_sections.append (bnf_section)
+            bnf_sections = ('|').join (bnf_sections)
+            statement_group_by = "GROUP BY practice_code,regexp_matches({vc},'{v}')"\
+            .format(v=bnf_sections,vc=self.value_header)
 
-            if ((period['month']!=default)) & (period['year']!=default):
-                table_name='t{y}{m}pdpi_bnft'.format(y=period['year'],m=period['month'])
-            else:
-                table_name='t201912pdpi_bnft'
+        else:
+            statement_group_by= "GROUP BY practice_code"
 
-            v,vc,vm,t=[bnf_code,'bnf_code',\
-                       measures['prescribing'],\
-                       table_name]
-            statement="SELECT practice_code,sum({vm})\
-                        FROM {t}\
-                        group by practice_code,regexp_matches({vc},'^{v}')"\
-                        .format(v=v,vc=vc,vm=vm,t=t)
+        return statement_group_by
 
-            statements['bnf_code']=statement
-            title='bnf_code: {m} {mo}/{ye}'\
-                    .format(m=vm.capitalize(),mo=period['month'],ye=period['year'])
+class combined_statement:
+
+    '''Build query statements for queries combining 2 features. The class was designed
+    for selectionf of both age and gender for the gender_age feature.
+    '''
+
+    def __init__(self,df):
+        self.measure_header = df.loc['gender','measure_header']
+        self.table = df.loc['gender','table']
+        self.age_group_value = df.loc ['age_groups','value']+('zzzzz',)
+        self.gender_value = df.loc ['gender','value']+('zzzzz',)
+        self.age_group_value_header = df.loc ['age_groups','value_header']
+        self.gender_value_header = df.loc ['gender','value_header']
 
 
-        # qof
-        if features['prevalence']!=default:
-            v,vc,vm,t=[features['prevalence'],'indication',\
-                       measures['prevalence'],'prevalence_2018_2019']
-            statement="SELECT practice_code,{vm} FROM {t}\
-                        WHERE {vc}='{v}'".format(v=v,vc=vc,vm=vm,t=t)
-            statements['qof']=statement
-            title='{v}: {m}'.format(v=v,m=vm.capitalize())
+    def build (self):
+        built_statement="SELECT practice_code,sum ({vm}) FROM {t}\
+                    WHERE {vc1} in {v1}\
+                    AND {vc2} in {v2}\
+                    Group by practice_code"\
+                    .format (vm=self.measure_header, t=self.table,\
+                             vc1=self.gender_value_header, v1=self.gender_value,\
+                             vc2=self.age_group_value_header,v2 =self.age_group_value)
 
-        # gender
-        if ((features['gender']!=default) & (features['age_groups']==(default,'0_4'))):
-            v,vc,vm,t=[features['gender'],'sex','register','gender_age_2018_2019']
-            statement="SELECT practice_code,{vc},{vm} FROM {t}\
-                        WHERE {vc}='{v}'".format(v=v,vc=vc,vm=vm,t=t)
-            statements['gender']=statement
-            title='Gender: {v}'.format(v=v.upper())
-
-        # age group
-        if ((features['gender']==default) & (features['age_groups']!=(default,'0_4'))):
-            v,vc,vm,t=[features['age_groups'],'age_group','register','gender_age_2018_2019']
-
-            # Allowing multiple age groups selection
-            statement="SELECT practice_code,sum({vm})\
-                        FROM gender_age_2018_2019\
-                        WHERE age_group in {v}\
-                        Group by practice_code".format(v=v,vc=vc,vm=vm,t=t)
-            statements['age_group']=statement
-            title='Age Group: {v}'.format(v=v)
-
-        # Gender and Age
-        if ((features['gender']!=default) & (features['age_groups']!=default)):
-            v1,v2,vc1,vc2,vm,t=[features['gender'],features['age_groups'],\
-                                'sex','age_group','register',\
-                                'gender_age_2018_2019']
-
-            statement="SELECT practice_code,sum ({vm}) FROM {t}\
-                        WHERE {vc1}='{v1}'\
-                        AND {vc2} in {v2}\
-                        Group by practice_code".format(v1=v1,v2=v2,vc1=vc1,vc2=vc2,vm=vm,t=t)
-            statements['gender_age']=statement
-            title='Gender: {v1} | Age Group: {v2}'.format(v1=v1.upper(),v2=v2)
-
-        # Deprivation
-        if features['deprivation']!=default:
-            v,vc,vm,t=[features['deprivation'],'deprivation_index',\
-                       measures['deprivation'],'deprivation_2019']
-            statement="SELECT practice_code,{vm} FROM {t}\
-                        WHERE {vc}='{v}'".format(v=v,vc=vc,vm=vm,t=t)
-            statements['deprivation']=statement
-            title='{v}: {m}'.format(v=v,m=vm.capitalize())
-
-        # Locations data
-        statement = "SELECT practice,practice_code,ccg,longitudemerc,latitudemerc\
-                     FROM practices_locations"
-        statements['location']=statement
-
-        return statements,title
+        return built_statement

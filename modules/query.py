@@ -10,23 +10,29 @@ def query (statements):
     host="prescribinguk.czm1h03t4mrp.eu-central-1.rds.amazonaws.com",
     port='5432'
     )
+
     cur = conn.cursor()
 
     query_dfs=[]
-    for query, statement in statements.items():
+    for query, qstatement in statements.items():
+        #print (query,'\n', qstatement)
         start=time.time()
-        cur.execute(statement)
+        cur.execute(qstatement)
         rows_fetched=cur.fetchall()
-        #if query in ['gender','qof','age_group','gender_age','deprivation','bnf_code']:
+        #print (rows_fetched[:3])
+
         if query !='location':
             a,b = map(list, zip(*rows_fetched))
             query_df=pd.DataFrame(data=list(zip(a,b)),columns=['practice_code',query])
 
-        #elif query =='location':
+        #if query =='location':
         else:
-            a,b,c,d,e = map(list, zip(*rows_fetched))
-            headers=['practice','practice_code','ccg','longitudemerc','latitudemerc']
-            query_df=pd.DataFrame(data=list(zip(a,b,c,d,e)),columns=headers)
+            a,b,c,d,e,f,g = map(list, zip(*rows_fetched))
+            headers=['practice','practice_code','ccg','region','sub_region','longitudemerc','latitudemerc']
+            query_df=pd.DataFrame(data=list(zip(a,b,c,d,e,f,g)),columns=headers)
+
+        #print (query_df.head())
+        #print (query_df.info())
 
         query_dfs.append(query_df)
         end=round ((time.time()-start),2)
