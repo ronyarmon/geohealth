@@ -4,35 +4,30 @@ def query (statements):
     import pandas as pd
 
     conn = psycopg2.connect(
-    database="postgres",
-    user="postgres",
-    password="ZCLhh62hwsDOsmN6rFgJ",
-    host="prescribinguk.czm1h03t4mrp.eu-central-1.rds.amazonaws.com",
-    port='5432'
+        database="postgres",
+        user="dashboard_user",
+        password="healthgeo2020",
+        host="prescribinguk.czm1h03t4mrp.eu-central-1.rds.amazonaws.com",
+        port='5432'
     )
 
     cur = conn.cursor()
 
     query_dfs=[]
-    for query, qstatement in statements.items():
-        #print (query,'\n', qstatement)
+    for query, statement in statements.items():
         start=time.time()
-        cur.execute(qstatement)
+        cur.execute(statement)
         rows_fetched=cur.fetchall()
-        #print (rows_fetched[:3])
-
+        #if query in ['gender','qof','age_group','gender_age','deprivation','bnf_code']:
         if query !='location':
             a,b = map(list, zip(*rows_fetched))
             query_df=pd.DataFrame(data=list(zip(a,b)),columns=['practice_code',query])
 
-        #if query =='location':
+        #elif query =='location':
         else:
-            a,b,c,d,e,f,g = map(list, zip(*rows_fetched))
-            headers=['practice','practice_code','ccg','region','sub_region','longitudemerc','latitudemerc']
-            query_df=pd.DataFrame(data=list(zip(a,b,c,d,e,f,g)),columns=headers)
-
-        #print (query_df.head())
-        #print (query_df.info())
+            a,b,c,d,e = map(list, zip(*rows_fetched))
+            headers=['practice','practice_code','ccg','longitudemerc','latitudemerc']
+            query_df=pd.DataFrame(data=list(zip(a,b,c,d,e)),columns=headers)
 
         query_dfs.append(query_df)
         end=round ((time.time()-start),2)
