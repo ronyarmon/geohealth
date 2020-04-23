@@ -1,3 +1,4 @@
+01: Gastro-Intestinal System
 0101: Dyspep&Gastro-Oesophageal Reflux Disease
 010101: Antacids and Simeticone
 010102: Compound Alginates&Prop Indigestion Prep
@@ -8,13 +9,20 @@
 010303: Chelates And Complexes
 010304: Prostaglandin Analogues
 010305: Proton Pump Inhibitors
+0104: Acute Diarrhoea
 010401: Adsorbents And Bulk-Forming Drugs
 010402: Antimotility Drugs
 010403: Enkephalinase Inhibitors
 010404: Tryptophan Hydroxylase Inhibitors
+0105: Chronic Bowel Disorders
+010501: Aminosalicylates
+010502: Corticosteroids
 010503: Drugs Affecting Immune Response
+010504: Food Allergy
+0106: Laxatives
 010601: Bulk-Forming Laxatives
 010602: Stimulant Laxatives
+010603: Faecal Softeners
 010604: Osmotic Laxatives
 010605: Bowel Cleansing Preparations
 010606: Peripheral Opioid-Receptor Antagonists
@@ -24,17 +32,23 @@
 010702: Co Haemorrhoidal Prep's + Corticosteroid
 010703: Rectal Sclerosants
 010704: Management of Anal Fissures
+0108: Stoma Care
 010801: Local Care of Stoma
 0109: Drugs Affecting Intestinal Secretions
 010901: Drugs Affecting Biliary Composition&Flow
+010904: Pancreatin
+02: Cardiovascular System
 0201: Positive Inotropic Drugs
 020101: Cardiac Glycosides
 020102: Phosphodiesterase Type-3 Inhibitors
+0202: Diuretics
 020201: Thiazides And Related Diuretics
+020202: Loop Diuretics
 020203: Pot-Sparing Diuretics&Aldosterone Antag
 020204: Potassium Sparing Diuretics & Compounds
 020205: Osmotic Diuretics
 020208: Diuretics With Potassium
+0203: Anti-Arrhythmic Drugs
 020302: Drugs For Arrhythmias
 0204: Beta-Adrenoceptor Blocking Drugs
 0205: Hypertension and Heart Failure
@@ -45,9 +59,11 @@
 020505: Renin-Angiotensin System Drugs
 020508: Other Adrenergic Neurone Blocking Drugs
 0206: Nit,Calc Block & Other Antianginal Drugs
+020601: Nitrates
 020602: Calcium-Channel Blockers
 020603: Other Antianginal Drugs
 020604: Peripheral Vasodilators & Related Drugs
+0207: Sympathomimetics
 020701: Inotropic Sympathomimetics
 020702: Vasoconstrictor Sympathomimetics
 020703: Cardiopulmonary Resuscitation
@@ -55,11 +71,17 @@
 020801: Parenteral Anticoagulants
 020802: Oral Anticoagulants
 020803: Protamine Sulfate
+0209: Antiplatelet Drugs
 02010: Stable Angina, Acute/Crnry Synd&Fibrin
 0201002: Fibrinolytic Drugs
 02011: Antifibrinolytic Drugs & Haemostatics
+02012: Lipid-Regulating Drugs
+02013: Local Sclerosants
+03: Respiratory System
+0301: Bronchodilators
 030101: Adrenoceptor Agonists
 030102: Antimuscarinic Bronchodilators
+030103: Theophylline
 030104: Compound Bronchodilator Preparations
 0302: Corticosteroids (Respiratory)
 0303: Cromoglycate,Rel,Leukotriene Antagonists
@@ -67,29 +89,45 @@
 030302: Leukotriene Receptor Antagonists
 030303: Phosphodiesterase Type-4 Inhibitors
 0304: Antihist, Hyposensit & Allergic Emergen
+030401: Antihistamines
 030402: Allergen Immunotherapy
 030403: Allergic Emergencies
 0305: Resp Stimulants & Pulmonary Surfactants
 030501: Respiratory Stimulants
+0306: Oxygen
+0307: Mucolytics
+0308: Aromatic Inhalations
+0309: Cough Preparations
 030901: Cough Suppressants
 030902: Expectorant & Demulcent Cough Prep's
 03010: Systemic Nasal Decongestants
+03011: Antifibrotics
+0301101: Antifibrotics
+04: Central Nervous System
 0401: Hypnotics And Anxiolytics
+040101: Hypnotics
+040102: Anxiolytics
+040103: Barbiturates
 0402: Drugs Used In Psychoses & Rel0Disorders
 040201: Antipsychotic Drugs
 040202: Antipsychotic Depot Injections
 040203: Drugs Used for Mania and Hypomania
+0403: Antidepressant Drugs
 040301: Tricyclic & Related Antidepressant Drugs
 040302: Monoamine-Oxidase Inhibitors (Maois)
 040303: Selective Serotonin Re-Uptake Inhibitors
 040304: Other Antidepressant Drugs
 0404: CNS Stimulants and drugs used for ADHD
+0405: Obesity
 040501: Gastro-Intestinal Anti-Obesity Drugs
 040502: Centrally-Acting Appetite Suppressants
 0406: Drugs Used In Nausea And Vertigo
+0407: Analgesics
 040701: Non-Opioid Analgesics And Compound Prep
 040702: Opioid Analgesics
+040703: Neuropathic Pain
 040704: Antimigraine Drugs
+0408: Antiepileptic Drugs
 040801: Control Of Epilepsy
 040802: Drugs Used In Status Epilepticus
 0409: Drugs Used In Park'ism/Related Disorders
@@ -100,33 +138,59 @@
 0401001: Alcohol Dependence
 0401002: Nicotine Dependence
 0401003: Opioid Dependence
+04011: Dementia
+05: Infections
+0501: Antibacterial Drugs
+050101: Penicillins
 050102: Cephalosporins and other Beta-Lactams
+050103: Tetracyclines
+050104: Aminoglycosides
+050105: Macrolides
 050106: Clindamycin and Lincomycin
 050107: Some Other Antibacterials
 050108: Sulfonamides And Trimethoprim
 050109: Antituberculosis Drugs
 0501010: Antileprotic Drugs
 0501011: Metronidazole, Tinidazole & Ornidazole
+0501012: Quinolones
 0501013: Urinary-Tract Infections
+0502: Antifungal Drugs
 050201: Triazole Antifungals
 050202: Imidazole Antifungals
 050203: Polyene Antifungals
 050204: Echinocandin Antifungals
 050205: Other Antifungals
+0503: Antiviral Drugs
+050301: HIV Infection
 050302: Herpesvirus Infections
+050303: Viral Hepatitis
+050304: Influenza
 050305: Respiratory Syncytial Virus
+0504: Antiprotozoal Drugs
+050401: Antimalarials
+050402: Amoebicides
 050404: Antigiardial Drugs
+050405: Leishmaniacides
 050408: Drugs For Pneumocystis Pneumonia
+0505: Anthelmintics
 050501: Drugs For Threadworms
+050502: Ascaricides
 050503: Drugs For Tapeworm Infections
+050505: Schistosomicides
+050506: Filaricides
+06: Endocrine System
+0601: Drugs Used In Diabetes
+060101: Insulin
 060102: Antidiabetic Drugs
 060104: Treatment Of Hypoglycaemia
 060106: Diabetic Diagnostic & Monitoring Agents
 0602: Thyroid And Antithyroid Drugs
+060201: Thyroid Hormones
 060202: Antithyroid Drugs
 0603: Corticosteroids (Endocrine)
 060301: Replacement Therapy
 060302: Glucocorticoid Therapy
+0604: Sex Hormones
 060401: Female Sex Hormones & Their Modulators
 060402: Male Sex Hormones And Antagonists
 060403: Anabolic Steroids
@@ -136,8 +200,12 @@
 0606: Drugs Affecting Bone Metabolism
 060601: Calcitonin and Parathyroid Hormone
 060602: Bisphosphonates and Other Drugs
+0607: Other Endocrine Drugs
 060701: Bromocriptine & Other Dopaminergic Drugs
 060702: Drugs affecting Gonadotrophins
+060703: Metyrapone
+060704: Somatomedins
+060705: Metreleptin
 07: Obstetrics,Gynae+Urinary Tract Disorders
 0701: Drugs Used In Obstetrics
 070101: Prostaglandins And Oxytocics
@@ -145,6 +213,7 @@
 0702: Treatment Of Vaginal & Vulval Conditions
 070201: Preparations For Vaginal/Vulval Changes
 070202: Vaginal and Vulval Infections
+0703: Contraceptives
 070301: Combined Hormonal Contraceptives/Systems
 070302: Progestogen-only Contraceptives
 070303: Spermicidal Contraceptives
@@ -157,7 +226,10 @@
 070405: Drugs For Erectile Dysfunction
 070406: Drugs For Premature Ejaculation
 08: Malignant Disease & Immunosuppression
+0801: Cytotoxic Drugs
+080101: Alkylating Drugs
 080102: Anthracyclines & Cytotoxic Antibiotics
+080103: Antimetabolites
 080104: Vinca Alkaloids And Etoposide
 080105: Other Antineoplastic Drugs
 080106: Other Cytotoxic Drugs
@@ -167,28 +239,53 @@
 080203: Anti-lymphocyte Monoclonal Antibodies
 080204: Other Immunomodulating Drugs
 0803: Sex Hormones & Antag In Malig Disease
+080301: Oestrogens
+080302: Progestogens
 080304: Hormone Antagonists
+09: Nutrition And Blood
 0901: Anaemias + Other Blood Disorders
 090101: Iron-Deficiency Anaemias
 090102: Drugs used in Megaloblastic Anaemias
 090103: Hypoplastic/Haemolytic & Renal Anaemias
 090104: Drugs used in Platelet Disorders
 090106: Drugs used in Neutropenia
+0902: Fluids And Electrolytes
 090201: Oral Prepn for Fluid & Electrolyte Imb
 090202: Parent Prepn for Fluid & Electrolyte Imb
+0903: Intravenous Nutrition
+0904: Oral Nutrition
 090401: Foods For Special Diets
 090402: Enteral Nutrition
+0905: Minerals
 090501: Calcium And Magnesium
+090502: Phosphorus
+090503: Fluoride
 090504: Zinc & Other Minerals
+090505: Selenium
+0906: Vitamins
+090601: Vitamin A
+090602: Vitamin B Group
+090603: Vitamin C
+090604: Vitamin D
+090605: Vitamin E
+090606: Vitamin K
 090607: Multivitamin Preparations
 090608: Other Vitamin Formulations
+0907: Bitters And Tonics
+0908: Metabolic Disorders
 090801: Drugs Used in Metabolic Disorders
+0909: Foods
 09010: Compound Vit/Mineral Formulations
+09011: Health Supplements
 0901101: Amino Acids & Nutritional Agents
+0901102: Enzymes
+0901103: Glandular
+0901104: Digestive Aids
 09012: Other Health Supplements
 010: Musculoskeletal & Joint Diseases
 01001: Drugs Used In Rheumatic Diseases & Gout
 0100101: Non-Steroidal Anti-Inflammatory Drugs
+0100102: Corticosteroids
 0100103: Rheumatic Disease Suppressant Drugs
 0100104: Gout & Cytotoxic Induced Hyperuicaemia
 0100105: Other Drugs For Rheumatic Diseases
@@ -196,16 +293,26 @@
 0100201: Dgs Which Enhance Neuromus'ar Transmi'on
 0100202: Skeletal Muscle Relaxants
 01003: Soft-Tissue Disorders & Topical Pain Rel
+0100301: Enzymes
 0100302: Rubefacients,Top NSAIDS,Capsaicin & Poul
+011: Eye
 01103: Anti-Infective Eye Preparations
+0110301: Antibacterials
+0110302: Antifungals
+0110303: Antivirals
 01104: Corti'roids & Other Anti-Inflamm0Preps0
+0110401: Corticosteroids
 0110402: Other Anti-Inflammatory Preparations
 01105: Mydriatics And Cycloplegics
+01106: Treatment Of Glaucoma
+01107: Local Anaesthetics
 01108: Miscellaneous Ophthalmic Preparations
 0110801: Tear Deficiency,Eye Lubricant/Astringent
 0110802: Ocular Diagnos/Peri-op Prepn&Photodyn Tt
 0110803: Other Eye Preparations
+012: Ear, Nose And Oropharynx
 01201: Drugs Acting On The Ear
+0120101: Otitis Externa
 0120103: Removal of Ear Wax & other Substances
 01202: Drugs Acting On The Nose
 0120201: Drugs Used In Nasal Allergy
@@ -217,22 +324,27 @@
 0120303: Lozenges & Sprays
 0120304: Mouth-Washes, Gargles, And Dentifrices
 0120305: Treatment Of Dry Mouth
+013: Skin
 01301: Management of Skin Conditions
 0130101: Management of Skin Conditions
 01302: Emollient & Barrier Preparations
+0130201: Emollients
 0130202: Barrier Preparations
+0130203: Dusting-Powders
 01303: Top Local Anaesthetics & Antipruritics
 01304: Topical Corticosteroids
 01305: Preparations For Eczema And Psoriasis
 0130501: Preparations For Eczema
 0130502: Preparations For Psoriasis
 0130503: Drugs Affecting The Immune Response
+01306: Acne and Rosacea
 0130601: Topical Preparations For Acne
 0130602: Oral Preparations For Acne
 0130603: Topical Preparation For Rosacea
 01307: Preparations For Warts And Calluses
 01308: Sunscreens And Camouflagers
 0130801: Sunscreening Preparations
+0130802: Camouflagers
 01309: Shampoo&Other Preps For Scalp&Hair Cond
 013010: Anti-Infective Skin Preparations
 01301001: Antibacterial Preparations
@@ -245,17 +357,24 @@
 01301102: Chlorhexidine Salts
 01301103: Cationic Surfactants & Soaps
 01301104: Chlorine & Iodine
+01301105: Phenolics
 01301106: Oxidisers & Dyes
 01301107: Desloughing Agents
+013012: Antiperspirants
 013013: Wound Management Products
 01301301: Medicated Stockings
 01301308: Gel And Colloid Dressings
 013014: Topical Circulatory Preparations
 013015: Miscellaneous Topical Preparations
 014: Immunological Products & Vaccines
+01403: Diagnostic Vaccines
+01404: Vaccines And Antisera
+01405: Immunoglobulins
 0140501: Normal Immunoglobulin
 0140502: Disease-Specific Immunoglobulins
 0140503: Anti-D (Rho) Immunoglobulin
+015: Anaesthesia
+01501: General Anaesthesia
 0150101: Intravenous Anaesthetics
 0150102: Inhalational Anaesthetics
 0150103: Antimuscarinic Drugs
@@ -263,57 +382,140 @@
 0150105: Neuromuscular Blocking Drugs
 0150106: Anticholinesterases Used in Anaesthesia
 0150107: Antagonists for Respiratory Depression
+01502: Local Anaesthesia
 0150201: Local Anaesthetics
 018: Preparations used in Diagnosis
+01803: X-Ray Contrast Media
+019: Other Drugs And Preparations
 01901: Alcohol, Wines & Spirits
+01902: Selective Preparations
 0190201: Individually Formulated Preps-Bought In
 0190202: Individ Formulated Preps-Prepared Extemp
 0190203: Homeopathic Preparations
 0190205: Household & Other Over The Counter Lines
 0190207: Poisoning Antidotes
+01904: Single Substances
+01905: Other Preparations
+01906: Acids
 0190601: Concentrated Waters
+0190603: Extracts
+0190605: Oils
+0190606: Tinctures
+0190607: Syrups
 01907: Base/Dil/Susp Agents/Stabilisers
 01908: Colouring,Flavouring & Sweetening Agents
 01909: Disinfectants,Preserv&Sterilising Agents
+019013: Cordials/Soft Drinks
+019014: Waters
+01901401: Sterile Water
+01901402: Purified Water
+019015: Other Gases
+020: Dressings
+02001: Absorbent Cottons
+02002: Arm Sling/Bandages
 02003: Wound Management & Other Dressings
+02004: Gauzes & Gauze Tissue
 02005: Tracheostomy & Laryngectomy Appliances
+02006: Foam
+02007: Lints
+02008: Plasters
+02009: Stockinette
 020010: Surgical Adhesive Tape
+020011: Surgical Sutures
+020012: Swabs
+020013: Unspecified Dressing
 020014: Skin Closure Strips, Sterile
 020015: Skin Adhesive, Sterile
+020016: Tapeless Holders
+020017: Cervical Collar
 020018: Cellulose Wadding BP 1988
+020020: Silk Garments
+021: Appliances
+02101: Other Appliances
+02102: Catheters
+02103: Chiropody Appliances
+02104: Contraceptive Devices
+02105: Suprapubic Appliances
+02106: Trusses
+02107: Elastic Hosiery
+02108: Oxygen Masks
 02109: Special Sanction Authorisations
 021010: C0A0P0D0 Administration Equipment
 021011: Special Authorisation Guernsey
+021012: Peak Flow Meters
 021013: Catheter Maintenance Products
+021014: Lubricant Gels
+021016: Irrigation Solutions
+021017: Nasal Device
 021018: Vacuum Pumps for Erectile Dysfunction
 021019: Oral Film Forming Agents
 021020: Venous Ulcer Compression System
+021021: Dry Mouth Products
+021022: Emollients
+021023: Vaginal Moisturisers
+021024: Nasal Products
+021025: Vaginal Dilators
+021026: Leg Ulcer Wrap
+021027: Lymphoedema Garments
 021028: Anal Irrigation System
 021029: Pressure Offloading Device
+021030: Eye Products
 021031: Cycloidal Vibration Accessories
+021032: Inhalation Solutions
 021033: Indwelling Pleural Cath Drain System
 021034: Vaginal PH Correction Products
+021035: Acne Treatment
 021036: Adhesive Dressing Remover Ster Silicone
+021037: Pelvic Toning Devices
+021038: Low Friction Products
+021039: Prosthetic Adhesives
 021040: Bacterial Decolonisation Products
 021041: Physical Debridement Device
 021042: Jaw Rehabilitation Device
 021043: Micro-Enema - Sodium Citrate
 021044: Dev For Adjunctive Tt Of Hypertension
+021045: Douches
 021046: Hernia Support Garments
 021047: Dev For Fungal Nail Infections
 021048: Detection Sensor Interstitial Fluid/Gluc
 021049: Pulsed Electromagnetic Stimulator
+022: Incontinence Appliances
+02202: Anal Plugs
+02205: Catheter Valves
 022010: Drainable Dribbling Appliances
+022015: Faecal Collectors
+022020: Incontinence Belts
+022030: Incontinence Sheaths
 022040: Incontinence Sheath Fixing Strips & Adh
+022050: Leg Bags
+022060: Night Drainage Bags
+022070: Suspensory Systems
 022080: Tubing And Accessories
 022085: Insert For Female Stress Incont
+022090: Urinal Systems
+023: Stoma Appliances
 02305: Adhesive Discs/Rings/Pads/Plasters
 023010: Adhesive (Pastes/Sprays/Solutions)
 023015: Adhesive Removers (Sprays/Liquids/Wipes)
+023020: Bag Closures
+023025: Bag Covers
+023030: Belts
+023035: Colostomy Bags
+023040: Colostomy Sets
+023045: Deodorants
 023046: Discharge Solidifying Agents
+023050: Filters/Bridges
+023055: Flanges
+023060: Ileostomy Bags
+023065: Ileostomy Sets
 023070: Irrigation Washout Appliances
 023075: Pressure Plates/Shields
 023080: Skin Fillers And Protectives
+023085: Skin Protectors
+023090: Stoma Caps/Dressings
+023092: Tubing & Accessories
 023093: Accessories (Guernsey)
 023094: Two Piece Ostomy Systems
+023096: Urostomy Bags
+023098: Urostomy Sets
 023099: Ostomy Appliances R/Sub Allowed Pre 1985

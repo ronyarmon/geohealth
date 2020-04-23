@@ -1,6 +1,8 @@
 class statement:
+    '''
+    Build statements for individual features
+    '''
 
-    # build statements using features' info contained in df
     def __init__(self,feature,df):
         self.value = df.loc[feature,'value']+('zzzzz',)
         self.table = df.loc[feature,'table']
@@ -22,22 +24,21 @@ class statement:
     def groupby (self,feature):
         if feature == 'prescribing':
             bnf_sections = []
-            for item in  self.value:
+            for item in self.value:
                 bnf_section = '^{i}'.format(i=item.split(':')[0])
                 bnf_sections.append (bnf_section)
             bnf_sections = ('|').join (bnf_sections)
             statement_group_by = "GROUP BY practice_code,regexp_matches({vc},'{v}')"\
-            .format(v=bnf_sections,vc=self.value_header)
-
+            .format(vc=self.value_header,v=bnf_sections)
         else:
             statement_group_by= "GROUP BY practice_code"
-
         return statement_group_by
 
-class combined_statement:
 
-    '''Build query statements for queries combining 2 features. The class was designed
-    for selectionf of both age and gender for the gender_age feature.
+class genderANDage_statement:
+
+    '''
+    Build query statements for queries combining both age and gender for the gender_age feature.
     '''
 
     def __init__(self,df):
@@ -47,7 +48,6 @@ class combined_statement:
         self.gender_value = df.loc ['gender','value']+('zzzzz',)
         self.age_group_value_header = df.loc ['age_groups','value_header']
         self.gender_value_header = df.loc ['gender','value_header']
-
 
     def build (self):
         built_statement="SELECT practice_code,sum ({vm}) FROM {t}\

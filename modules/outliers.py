@@ -16,15 +16,16 @@ def detect_indices (df,header):
     desc_stats=df[header].describe()
 
     # capture quartile values data from the descriptive stats
-    first_q,third_q=desc_stats.loc ['25%'],desc_stats.loc ['75%']
-    IQR=float (third_q-first_q)
+    first_q,third_q = desc_stats.loc ['25%'],desc_stats.loc ['75%']
+    IQR = float (third_q-first_q)
     lowest,highest = first_q-1.5*IQR, third_q+1.5*IQR
-    outliers=[v for v in header_values if ((v<lowest) or (v>highest))]
-    perc_outliers=round(100 * (len (outliers)/len (header_values)),2)
-    outliers_df=df[df[header].isin(outliers)]
-    outliers_df_indices=list(outliers_df.index)
+    outliers = [v for v in header_values if ((v<lowest) or (v>highest))]
+    perc_outliers = round(100 * (len (outliers)/len (header_values)),2)
+    outliers_df = df[df[header].isin(outliers)]
+    outliers_df_indices = list(outliers_df.index)
 
-    print ('{p}% of {n} values for {h} are outliers which will be removed'.\
-    format(p=perc_outliers,h=header, n=len (header_values)))
+    if perc_outliers > 0:
+        print ('{p}% of {n} values for {h} are outliers which will be removed'.\
+        format(p=perc_outliers,h=header, n=len (header_values)))
 
     return outliers_df_indices

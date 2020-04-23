@@ -3,7 +3,7 @@ import numpy as np
 import re
 import os
 from bokeh.models import Circle, ColumnDataSource, ColorBar,HoverTool,\
-Select, CustomJS,CustomJSFilter,CDSView,IndexFilter
+Select, CustomJS,CustomJSFilter,CDSView,IndexFilter,Title
 from bokeh.plotting import figure, show, output_notebook,output_file
 from bokeh.tile_providers import Vendors, get_provider
 from bokeh.palettes import brewer, all_palettes, Spectral6, Inferno
@@ -16,26 +16,21 @@ from bokeh.layouts import column, row, WidgetBox, layout
 # lists of geo values
 lists_dir_path='./lists/'
 ccgs,regions,sub_regions=[],[],[]
-ccgs = open (lists_dir_path+'ccg.txt').read().split('\n')[:-1]
+ccgs = open (lists_dir_path+'ccgs.txt').read().split('\n')[:-1]
 ccgs = ['All']+ccgs
-regions = open (lists_dir_path+'region.txt').read().split('\n')[:-1]
+regions = open (lists_dir_path+'regions.txt').read().split('\n')[:-1]
 regions = ['All']+regions
-sub_regions = open (lists_dir_path+'sub_region.txt').read().split('\n')[:-1]
+sub_regions = open (lists_dir_path+'sub_regions.txt').read().split('\n')[:-1]
 sub_regions = ['All']+sub_regions
-
-def map_plot(data,title):
+def map_plot(data,title, output_choice_selection):
     full_source = ColumnDataSource(data) # a CDS version of the data obtained
     # a CDS version of the data to plot, modifiable by geo dropdowns, to be produced in the callback
-
     num_instances=len(data)
-    ##print ('all instances count=',num_instances)
 
     geo_columns=['practice_code', 'practice', 'ccg', 'region','sub_region','longitudemerc','latitudemerc']
     value_columns=[h for h in data.columns if h not in geo_columns]
-    #print ('values columns:',value_columns)
     first_value = value_columns[0]
     hover_first_value='@{fv}'.format (fv=first_value)
-
     if len (value_columns)==2:
         second_value = value_columns[1]
         sv_column=np.array(data[second_value])
@@ -43,24 +38,33 @@ def map_plot(data,title):
         norm_header=second_value+'_norm'
         data[norm_header]=svinterp
 
+    print ('value_columns:',value_columns)
+    print ('values df to source:')
+    print (data.head())
+
     source = ColumnDataSource(data)
     filter = IndexFilter(indices=list(data.index))
     view = CDSView(source=source, filters=[filter])
-
-    plot = figure(x_axis_type="mercator", y_axis_type="mercator",
-               plot_height=700, plot_width=700,
-               title=title)
+    plot = figure(x_axis_type="mercator", y_axis_type="mercator",plot_height=700, plot_width=700)
+    plot.title.text_color = 'purple'
     tooltips=[('Practice', '@practice'), ('CCG', '@ccg'), (first_value.capitalize(),hover_first_value)]
+    title_parts = title.split ('\n')
+    if len (title_parts)==2:
+        for i in [1,0]:
+            plot.add_layout(Title(text = '  ' + title_parts[i], text_font_size="10pt", text_color = 'purple'), 'above')
+    else:
+        plot.add_layout(Title(text = '  ' + title_parts[0], text_font_size="10pt", text_color = 'purple'), 'above')
 
-    # Color bar
+    # Color mapper
+    palette = list(reversed (brewer['YlOrRd'][9]))
     if first_value=='deprivation':
         low_boundary,high_boundary = max (source.data[first_value]), min (source.data[first_value])
     else:
         high_boundary,low_boundary = max (source.data[first_value]), min (source.data[first_value])
+    mapper = linear_cmap(field_name=first_value, palette=palette,\
+    low=low_boundary, high=high_boundary) #Spectral6
 
-    mapper = linear_cmap(field_name=first_value, palette=Spectral6,\
-    low=low_boundary, high=high_boundary) #brewer['YlOrRd'][9]
-    #add map tiles
+    # add map tiles
     map_tile=get_provider(Vendors.CARTODBPOSITRON)
     plot.add_tile(map_tile)
 
@@ -68,25 +72,20 @@ def map_plot(data,title):
         hover_second_value='@{sv}'.format (sv=second_value)
         tooltips.append((second_value.capitalize(),hover_second_value))
         plot.circle(source=source, x='latitudemerc',y='longitudemerc',\
-        hover_color='red', color=mapper,size=norm_header, alpha=0.4, view = view)
-
+        hover_color='red', color=mapper,size=norm_header, alpha=0.4,\
+        view = view)
     else:
         plot.circle(source=source, view=view, x='latitudemerc',y='longitudemerc',\
         hover_color='red', color=mapper)
 
-
-    #print ('tooltips:',tooltips)
     hover = HoverTool(tooltips = tooltips)
-
-    color_bar = ColorBar(color_mapper=mapper['transform'], width=8,  location=(0,0))
+    color_bar = ColorBar(color_mapper=mapper['transform'], width=8, location=(0,0))
     plot.add_layout(color_bar, 'right')
     plot.add_tools(hover)
-
     # Bojeh widgets using CustomJS
     callback = CustomJS(args=dict(source=source, filter=filter), code='''
       var indices = []
       var selected_value = cb_obj.value
-
       if (selected_value=='All') {
         indices = source.index
         console.log ('all ccgs selected')
@@ -104,16 +103,16 @@ def map_plot(data,title):
       source.change.emit()
     ''')
 
-    select_ccg = Select(title='Clinical Commissioning Group', value=ccgs[0], options=ccgs)
+    select_ccg = Select(title='Clinical Commissioning Group', value=ccgs[0], options=ccgs, width=120)
     select_ccg.js_on_change('value', callback)
-    select_region = Select(title='Region', value=regions [0], options=regions)
+    select_region = Select(title='Region', value=regions [0], options=regions, width=120)
     select_region.js_on_change('value', callback)
-    select_sub_region = Select(title='Sub-Region', value=sub_regions [0], options=sub_regions)
+    select_sub_region = Select(title='Sub-Region', value=sub_regions [0], options=sub_regions, width=120)
     select_sub_region.js_on_change('value', callback)
-
     view = CDSView(source=source, filters=[filter])
 
-    output_notebook()
-
-    #output_file('test.html')
-    show(column(row(select_region,select_sub_region,select_ccg), plot))
+    if output_choice_selection == 'Notebook':
+        output_notebook()
+    elif output_choice_selection == 'HTML File':
+        output_file('plot.html')
+    show(row (column(select_region,select_sub_region,select_ccg), plot))
