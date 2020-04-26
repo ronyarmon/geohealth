@@ -111,7 +111,7 @@ def get_title(df):
     ga_selected_intersect = gender_age.intersection(selected_features)==gender_age
     selected_features = list (selected_features)
     features_titles = {}
-    print ('title created')
+
     for index, feature in enumerate (selected_features):
         measure = df.loc [feature, 'measure_header']
         val = df.loc [feature, 'value']
@@ -119,7 +119,6 @@ def get_title(df):
         format(f=feature.capitalize(), me= measure.capitalize(), v=val)
         feature_title = re.sub ("\(|\)|'",'',feature_title)
         feature_title = re.sub (",,",',',feature_title)
-        print ('feature_title:',feature_title)
         features_titles[feature] = feature_title
 
     if ga_selected_intersect:
@@ -128,26 +127,5 @@ def get_title(df):
         ge_ag = 'Gender and Age, {vg}, {va}, {me}'.format (vg=ge[1], va=ag[1], me = ge[2])
         del features_titles['gender']
         del features_titles ['age_groups']
-        print ('ga feature_title:',ge_ag)
         features_titles ['gender_age_groups'] = ge_ag
-
-    print ('feature titles:',features_titles)
-    '''
-    # add mark
-    marks=['Color','Size']
-    marks_feature_titles=[]
-    print ('list(features_titles.keys()):',list(features_titles.keys()))
-    for index, title in enumerate (list(features_titles.keys())):
-        print (title)
-        mark = marks [index]
-        print (mark)
-        feature_title = '{mark}: {ft}'.format(mark = mark, ft = features_titles[title].rstrip(','))
-        print (feature_title)
-        print ('----')
-        marks_feature_titles.append (feature_title)
-
-    title = ('\n').join(marks_feature_titles)
-    '''
-    #title = ('\n').join(list(features_titles.values()))
-
     return features_titles

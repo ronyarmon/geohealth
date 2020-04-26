@@ -33,11 +33,8 @@ def map_plot(data,features_titles, output_choice_selection):
     value_columns=[h for h in data.columns if h not in geo_columns]
 
     # Assert gender-age as the second value (to be marked by size)
-    print ('value_columns before reversing:',value_columns)
-
     if value_columns[0] in ['gender','age_groups','gender_age_groups']:
         value_columns = list(reversed(value_columns))
-    print ('value_columns:',value_columns)
 
     first_value = value_columns[0]
     features_marks = {first_value: 'Color'}
@@ -52,13 +49,8 @@ def map_plot(data,features_titles, output_choice_selection):
             svinterp = max (svinterp)-svinterp
         norm_header=second_value+'_norm'
         data[norm_header] = svinterp
-        #rev_header = second_value+'_norm_rev'
-        #data[rev_header] = svinterp_rev
         features_marks [second_value] = 'Size'
 
-    print ('features_marks:',features_marks)
-    #print ('values df to source:')
-    #print (data[[second_value,norm_header,rev_header]].head(40))
 
     source = ColumnDataSource(data)
     filter = IndexFilter(indices=list(data.index))
@@ -69,10 +61,7 @@ def map_plot(data,features_titles, output_choice_selection):
 
     # Title
     title_parts = []
-    print ('features_titles:', features_titles)
     for feature,title in features_titles.items():
-        print (feature,title)
-        print (features_marks[feature])
         title_part = '  {m}: {t}'.format (m = features_marks[feature], t = title)
         title_parts.append(title_part)
 
@@ -82,17 +71,13 @@ def map_plot(data,features_titles, output_choice_selection):
 
     # Color mapper
     palette = list(reversed (brewer['YlOrRd'][9]))
-    print ('first_value:',first_value)
     if first_value=='deprivation':
         low_boundary,high_boundary = max (source.data[first_value]), min (source.data[first_value])
     else:
         high_boundary,low_boundary = max (source.data[first_value]), min (source.data[first_value])
 
-    print ('low_boundary,high_boundary:', low_boundary,high_boundary)
-
     mapper = linear_cmap(field_name=first_value, palette=palette,\
     low=low_boundary, high=high_boundary) #Spectral6
-
 
     # add map tiles
     map_tile=get_provider(Vendors.CARTODBPOSITRON)
@@ -113,7 +98,8 @@ def map_plot(data,features_titles, output_choice_selection):
     color_bar = ColorBar(color_mapper=mapper['transform'], width=8, location=(0,0))
     plot.add_layout(color_bar, 'right')
     plot.add_tools(hover)
-    # Bojeh widgets using CustomJS
+
+    # Plot widgets 
     callback = CustomJS(args=dict(source=source, filter=filter), code='''
       var indices = []
       var selected_value = cb_obj.value
