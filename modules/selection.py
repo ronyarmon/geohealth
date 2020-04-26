@@ -3,94 +3,105 @@ def get_tables(df,features):
     for feature in features:
         year = df.loc[feature,'year']
         month = df.loc[feature,'month']
-        if feature in ['prevalence','deprivation']:
+        if feature in ['prevalence']:
             table_name='{f}_{y}'.format(f=feature,y=year)
+
         elif feature in ['gender','age_groups']:
             feature='gender_age'
             table_name='{f}_{y}{m}'.format(f=feature,m=month,y=year)
+
+        elif feature == 'deprivation':
+            if year in ['2014','2015']:
+                year = '2015'
+            else:
+                year = '2019'
+            table_name = '{f}_{y}'.format(f=feature,y=year)
+
         else:
             table_name='{f}_{y}{m}'.format(f=feature,m=month,y=year)
         table_names.append(table_name)
     return table_names
 
-def check_errors (df,features):
-
+def validate (df,features):
     error = False
     comment = ''
 
-    # Assert the selection of no more than 2 values (apart from gender)
-    dfvalues = df[df.index.isin (['gender','age_groups'])]
-    if len (dfvalues)==1:
-        features_count = len (df)
-    else:
-        features_count = len (df) -1
-
-    if features_count >2:
+    # Assert value selection
+    if df.index.empty:
         error = True
-        comment = 'Please select upto two features to show on the plot and run again'
+        comment = 'Please select a value and run again'
 
     if error == False:
-        # Assert the selection of month if gender, age, or prescribing were selected as features
-        dfvalues = df[df.index.isin (['prescribing','gender','age_groups'])]
-        month_values = list (df ['month'])
-        month_values = [i for i in month_values if i != '   ']
-        if not month_values:
+        # Assert the selection of no more than 2 values (apart from gender)
+        dfvalues = df[df.index.isin (['gender','age_groups'])]
+        if len (dfvalues)==1:
+            features_count = len (df)
+        else:
+            features_count = len (df) -1
+
+        if features_count >2:
             error = True
-            comment = 'Please select month and run again'
+            comment = 'Please select upto two features to show on the plot and run again'
 
         if error == False:
-            # Assert availability of the value selected for the selected feature and period
-            import psycopg2
-            import pandas as pd
-            import time
-            conn = psycopg2.connect(
-                    database="postgres",
-                    user="dashboard_user",
-                    password="healthgeo2020",
-                    host="prescribinguk.czm1h03t4mrp.eu-central-1.rds.amazonaws.com",
-                    port= '5432'
-                    )
-            cur = conn.cursor()
+            # Assert the selection of month for gender, age, or prescribing
+            dfvalues = df[df.index.isin (['prescribing','gender','age_groups'])]
+            month_values = list (df ['month'])
+            month_values = [i for i in month_values if i != '   ']
+            if not month_values:
+                error = True
+                comment = 'Please select month and run again'
+
+            if error == False:
+                # Assert availability of the value selected for the selected feature and period
+                import psycopg2
+                import pandas as pd
+                import time
+                conn = psycopg2.connect(
+                        database="postgres",
+                        user="dashboard_user",
+                        password="healthgeo2020",
+                        host="prescribinguk.czm1h03t4mrp.eu-central-1.rds.amazonaws.com",
+                        port= '5432'
+                        )
+                cur = conn.cursor()
 
 
-            start = time.time()
-            for feature in features:
-                values = df.loc[feature,'value']
-                value_header = df.loc[feature,'value_header']
-                table = df.loc[feature,'table']
-                month,year = df.loc[feature,'month'],df.loc[feature,'year']
+                start = time.time()
+                for feature in features:
+                    values = df.loc[feature,'value']
+                    value_header = df.loc[feature,'value_header']
+                    table = df.loc[feature,'table']
+                    month,year = df.loc[feature,'month'],df.loc[feature,'year']
 
-                if feature == 'prescribing':
-                    bnf_sections = []
-                    for item in values:
-                        bnf_section = '^{i}'.format(i=item.split(':')[0])
-                        bnf_sections.append (bnf_section)
-                    valuesl = ('|').join (bnf_sections)
+                    if feature == 'prescribing':
+                        bnf_sections = []
+                        for item in values:
+                            bnf_section = '^{i}'.format(i=item.split(':')[0])
+                            bnf_sections.append (bnf_section)
+                        valuesl = ('|').join (bnf_sections)
 
-                    statement = "SELECT DISTINCT regexp_matches({vh},'{v}') FROM {t}"\
-                    .format(vh=value_header,v=valuesl,t=table)
-                    valuesl = [str(value.lstrip('^')) for value in valuesl.split('|')]
-                    cur.execute(statement)
-                    distinct_values = cur.fetchall()
-                    distinct_values=[dv[0][0] for dv in distinct_values]
+                        statement = "SELECT DISTINCT regexp_matches({vh},'{v}') FROM {t}"\
+                        .format(vh=value_header,v=valuesl,t=table)
+                        valuesl = [str(value.lstrip('^')) for value in valuesl.split('|')]
+                        cur.execute(statement)
+                        distinct_values = cur.fetchall()
+                        distinct_values=[dv[0][0] for dv in distinct_values]
 
-                else:
-                    statement="SELECT DISTINCT {vh} FROM {t}".format (vh=value_header,t=table)
-                    valuesl = list (values)
-                    cur.execute(statement)
-                    distinct_values = cur.fetchall()
-                    distinct_values=[dv[0] for dv in distinct_values]
+                    else:
+                        statement="SELECT DISTINCT {vh} FROM {t}".format (vh=value_header,t=table)
+                        valuesl = list (values)
+                        cur.execute(statement)
+                        distinct_values = cur.fetchall()
+                        distinct_values=[dv[0] for dv in distinct_values]
 
+                    for value in valuesl:
+                        if value not in distinct_values:
+                            error = True
+                            comment = '{v} not found in the data for {f} in {m} {y}'.\
+                                  format (v=value,f=feature.capitalize(),m=month,y=year)
 
-
-                for value in valuesl:
-
-                    if value not in distinct_values:
-                        error = True
-                        comment = '{v} not found in the data for {f} in {m} {y}'.\
-                              format (v=value,f=feature.capitalize(),m=month,y=year)
-
-                        break
+                            break
     return (error, comment)
 
 def get_title(df):
@@ -120,6 +131,8 @@ def get_title(df):
         print ('ga feature_title:',ge_ag)
         features_titles ['gender_age_groups'] = ge_ag
 
+    print ('feature titles:',features_titles)
+    '''
     # add mark
     marks=['Color','Size']
     marks_feature_titles=[]
@@ -134,5 +147,7 @@ def get_title(df):
         marks_feature_titles.append (feature_title)
 
     title = ('\n').join(marks_feature_titles)
+    '''
+    #title = ('\n').join(list(features_titles.values()))
 
-    return title
+    return features_titles

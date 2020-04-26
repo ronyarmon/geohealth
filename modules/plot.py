@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import re
 import os
+import sys
 from bokeh.models import Circle, ColumnDataSource, ColorBar,HoverTool,\
 Select, CustomJS,CustomJSFilter,CDSView,IndexFilter,Title
 from bokeh.plotting import figure, show, output_notebook,output_file
@@ -22,25 +23,42 @@ regions = open (lists_dir_path+'regions.txt').read().split('\n')[:-1]
 regions = ['All']+regions
 sub_regions = open (lists_dir_path+'sub_regions.txt').read().split('\n')[:-1]
 sub_regions = ['All']+sub_regions
-def map_plot(data,title, output_choice_selection):
+def map_plot(data,features_titles, output_choice_selection):
     full_source = ColumnDataSource(data) # a CDS version of the data obtained
     # a CDS version of the data to plot, modifiable by geo dropdowns, to be produced in the callback
     num_instances=len(data)
 
+    # Split the columns with the values to plot to build their marks and title
     geo_columns=['practice_code', 'practice', 'ccg', 'region','sub_region','longitudemerc','latitudemerc']
     value_columns=[h for h in data.columns if h not in geo_columns]
+
+    # Assert gender-age as the second value (to be marked by size)
+    print ('value_columns before reversing:',value_columns)
+
+    if value_columns[0] in ['gender','age_groups','gender_age_groups']:
+        value_columns = list(reversed(value_columns))
+    print ('value_columns:',value_columns)
+
     first_value = value_columns[0]
+    features_marks = {first_value: 'Color'}
     hover_first_value='@{fv}'.format (fv=first_value)
+
+    # Normalized size values for the second feature if such exists
     if len (value_columns)==2:
         second_value = value_columns[1]
         sv_column=np.array(data[second_value])
-        svinterp=np.interp(sv_column, (sv_column.min(), sv_column.max()), (0,10))
+        svinterp = np.interp(sv_column, (sv_column.min(), sv_column.max()), (0,2000)) #was 10 for size
+        if second_value == 'deprivation':
+            svinterp = max (svinterp)-svinterp
         norm_header=second_value+'_norm'
-        data[norm_header]=svinterp
+        data[norm_header] = svinterp
+        #rev_header = second_value+'_norm_rev'
+        #data[rev_header] = svinterp_rev
+        features_marks [second_value] = 'Size'
 
-    print ('value_columns:',value_columns)
-    print ('values df to source:')
-    print (data.head())
+    print ('features_marks:',features_marks)
+    #print ('values df to source:')
+    #print (data[[second_value,norm_header,rev_header]].head(40))
 
     source = ColumnDataSource(data)
     filter = IndexFilter(indices=list(data.index))
@@ -48,21 +66,33 @@ def map_plot(data,title, output_choice_selection):
     plot = figure(x_axis_type="mercator", y_axis_type="mercator",plot_height=700, plot_width=700)
     plot.title.text_color = 'purple'
     tooltips=[('Practice', '@practice'), ('CCG', '@ccg'), (first_value.capitalize(),hover_first_value)]
-    title_parts = title.split ('\n')
-    if len (title_parts)==2:
-        for i in [1,0]:
-            plot.add_layout(Title(text = '  ' + title_parts[i], text_font_size="10pt", text_color = 'purple'), 'above')
-    else:
-        plot.add_layout(Title(text = '  ' + title_parts[0], text_font_size="10pt", text_color = 'purple'), 'above')
+
+    # Title
+    title_parts = []
+    print ('features_titles:', features_titles)
+    for feature,title in features_titles.items():
+        print (feature,title)
+        print (features_marks[feature])
+        title_part = '  {m}: {t}'.format (m = features_marks[feature], t = title)
+        title_parts.append(title_part)
+
+    title_parts = list (reversed(title_parts))
+    for title_part in title_parts:
+        plot.add_layout(Title(text = title_part, text_font_size="10pt", text_color = 'purple'), 'above')
 
     # Color mapper
     palette = list(reversed (brewer['YlOrRd'][9]))
+    print ('first_value:',first_value)
     if first_value=='deprivation':
         low_boundary,high_boundary = max (source.data[first_value]), min (source.data[first_value])
     else:
         high_boundary,low_boundary = max (source.data[first_value]), min (source.data[first_value])
+
+    print ('low_boundary,high_boundary:', low_boundary,high_boundary)
+
     mapper = linear_cmap(field_name=first_value, palette=palette,\
     low=low_boundary, high=high_boundary) #Spectral6
+
 
     # add map tiles
     map_tile=get_provider(Vendors.CARTODBPOSITRON)
@@ -71,8 +101,9 @@ def map_plot(data,title, output_choice_selection):
     if len (value_columns)==2:
         hover_second_value='@{sv}'.format (sv=second_value)
         tooltips.append((second_value.capitalize(),hover_second_value))
+
         plot.circle(source=source, x='latitudemerc',y='longitudemerc',\
-        hover_color='red', color=mapper,size=norm_header, alpha=0.4,\
+        hover_color='red', color=mapper,radius = norm_header, alpha=0.2,\
         view = view)
     else:
         plot.circle(source=source, view=view, x='latitudemerc',y='longitudemerc',\
@@ -103,7 +134,7 @@ def map_plot(data,title, output_choice_selection):
       source.change.emit()
     ''')
 
-    select_ccg = Select(title='Clinical Commissioning Group', value=ccgs[0], options=ccgs, width=120)
+    select_ccg = Select(title='CCG', value=ccgs[0], options=ccgs, width=120)
     select_ccg.js_on_change('value', callback)
     select_region = Select(title='Region', value=regions [0], options=regions, width=120)
     select_region.js_on_change('value', callback)

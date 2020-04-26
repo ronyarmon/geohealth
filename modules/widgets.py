@@ -19,7 +19,7 @@ gender=list(default)+['FEMALE','MALE']
 age_groups = list(default)+open('{ld}age_groups.txt'.format(ld=lists_dir)).read().split('\n')[:-1]
 age_groups = [re.sub('-','_',i) for i in age_groups]
 deprivation_indices = open('{ld}deprivation_indices.txt'.format(ld=lists_dir)).read().split('\n')[:-1]
-deprivation_indices = list(default)+[re.sub(' ','_',i) for i in deprivation_indices]
+deprivation_indices = ['ignore']+[re.sub(' ','_',i) for i in deprivation_indices]
 
 # Drop Down menues
 bnf_code_dd=widgets.SelectMultiple(options=bnf_codes,value=default,
@@ -34,8 +34,9 @@ age_groups_dd=widgets.SelectMultiple(options=age_groups,value=default,
     description='Age Group:',style=style ,layout=features_layout)
 gender_dd=widgets.SelectMultiple(options=gender,value=default,
     description='Gender:',style=style,layout=features_layout)
-deprivation_dd=widgets.SelectMultiple (options=deprivation_indices,value=default,
-    description='Index:',style=style,layout=features_layout)
+deprivation_dd=widgets.Dropdown(options=deprivation_indices,value='ignore',
+    description='Index:',style=style)
+
 
 ''' Measures '''
 # Values
@@ -45,13 +46,13 @@ gender_age_measures=['register','percentage']
 deprivation_measures=['rank','decile']
 
 # Drop Down menues
-prescribing_measures_dd=widgets.Dropdown(options=prescribing_measures,value='quantity',
+prescribing_measures_dd = widgets.Dropdown(options=prescribing_measures,value='quantity',
     description='  Measure:  ',style=style,layout=measures_layout)
-prevalence_measures_dd=widgets.Dropdown(options=prevalence_measures,value='register',
+prevalence_measures_dd=widgets.Dropdown(options=prevalence_measures,value='prevalence',
     description='  Measure:  ',style=style,layout=measures_layout)
-gender_age_measures_dd=widgets.Dropdown(options=gender_age_measures,value='register',
+gender_age_measures_dd=widgets.Dropdown(options=gender_age_measures,value='percentage',
     description='  Measure:  ',style=style,layout=measures_layout)
-deprivation_measures_dd=widgets.Dropdown(options=deprivation_measures,value='rank',
+deprivation_measures_dd=widgets.Dropdown(options=deprivation_measures,value='decile',
     description='  Measure:  ',style=style,layout=measures_layout)
 
 ''' Period '''
@@ -65,9 +66,10 @@ month_dd=widgets.Dropdown(options=months,value='   ',
 year_dd=widgets.Dropdown(options=years,value='2019',
     description='Year:',style=style)
 
-outliers_choice=widgets.RadioButtons(options=['Remove', 'Keep'],value = 'Remove', description='Ouliers:',style=style)
-download_choice=widgets.RadioButtons(options=['CSV','Excel','None'],value = 'CSV', description='Download:',style=style)
-output_choice=widgets.RadioButtons(options=['Notebook','HTML File'],value = 'Notebook', description='Output:',style=style)
+# General choice menus
+outliers_choice = widgets.RadioButtons(options=['Remove', 'Keep'],value = 'Remove', description='Ouliers:',style=style)
+download_choice = widgets.RadioButtons(options=['CSV','Excel','None'],value = 'CSV', description='Download:',style=style)
+output_choice = widgets.RadioButtons(options=['HTML File','Notebook'],value = 'HTML File', description='Output:',style=style)
 
 button = widgets.Button(description = "Run",style=style)
 button.style.button_color = 'lightgreen'
