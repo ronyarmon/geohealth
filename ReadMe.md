@@ -1,6 +1,6 @@
 # GeoHealth #
 
-GeoHealth is a model for a public health dashboard set up for the purpose of presenting and connecting medical and social data from diverse sources. The current version is focused on England using public health and socio-demographic information available at the level of General Practice from around 8,000 surgeries. Their datasets, which were collected and prepared as part of this project, can be queried to produce a geo-spatial representation of the prevalence of diseases, risk factors and social deprivation on the national, regional and local levels.
+[GeoHealth](https://medium.com/@rony_armon/geohealth-a-unified-dashboard-for-medical-and-social-data-d33a03b94c2e) is a model for a public health dashboard set up for the purpose of presenting and connecting medical and social data from diverse sources. The current version is focused on England using public health and socio-demographic information available at the level of General Practice from around 8,000 surgeries. Their datasets, which were collected and prepared as part of this project, can be queried to produce a geo-spatial representation of the prevalence of diseases, risk factors and social deprivation on the national, regional and local levels.
 
 The following features are available for exploration:
 1. Practice level prescribing data
