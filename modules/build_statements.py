@@ -1,6 +1,6 @@
 class statement:
     '''
-    Build statements for individual features
+    Build SQL statements for individual features
     '''
 
     def __init__(self,feature,df):
@@ -9,11 +9,13 @@ class statement:
         self.value_header = df.loc[feature,'value_header']
         self.measure_header = df.loc[feature,'measure_header']
 
+    # Build the select column/table part of the statements
     def select (self,feature):
         statement_select="SELECT practice_code,sum({vm}) FROM {t}"\
                 .format (vm=self.measure_header, t=self.table)
         return statement_select
 
+    # Build the conditional selection part of the statement
     def where (self,feature):
         if feature == 'prescribing':
             statement_where = ''
@@ -21,6 +23,7 @@ class statement:
             statement_where="WHERE {vh} in {v}".format(v=self.value,vh=self.value_header)
         return statement_where
 
+    # Build the aggregation part of the statement    
     def groupby (self,feature):
         if feature == 'prescribing':
             bnf_sections = []

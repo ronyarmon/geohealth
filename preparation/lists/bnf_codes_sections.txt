@@ -1,0 +1,840 @@
+  * 1: Gastro-Intestinal System <https://openprescribing.net/bnf/01/>
+  *    1.1: Dyspep&Gastro-Oesophageal Reflux Disease
+    <https://openprescribing.net/bnf/0101/>
+  *       1.1.1: Antacids and Simeticone
+    <https://openprescribing.net/bnf/010101/>
+  *       1.1.2: Compound Alginates&Prop Indigestion Prep
+    <https://openprescribing.net/bnf/010102/>
+  *    1.2: Antispasmod.&Other Drgs Alt.Gut Motility
+    <https://openprescribing.net/bnf/0102/>
+  *    1.3: Antisecretory Drugs+Mucosal Protectants
+    <https://openprescribing.net/bnf/0103/>
+  *       1.3.1: H2-Receptor Antagonists
+    <https://openprescribing.net/bnf/010301/>
+  *       1.3.2: Selective Antimuscarinics
+    <https://openprescribing.net/bnf/010302/>
+  *       1.3.3: Chelates And Complexes
+    <https://openprescribing.net/bnf/010303/>
+  *       1.3.4: Prostaglandin Analogues
+    <https://openprescribing.net/bnf/010304/>
+  *       1.3.5: Proton Pump Inhibitors
+    <https://openprescribing.net/bnf/010305/>
+  *    1.4: Acute Diarrhoea <https://openprescribing.net/bnf/0104/>
+  *       1.4.1: Adsorbents And Bulk-Forming Drugs
+    <https://openprescribing.net/bnf/010401/>
+  *       1.4.2: Antimotility Drugs
+    <https://openprescribing.net/bnf/010402/>
+  *       1.4.3: Enkephalinase Inhibitors
+    <https://openprescribing.net/bnf/010403/>
+  *       1.4.4: Tryptophan Hydroxylase Inhibitors
+    <https://openprescribing.net/bnf/010404/>
+  *    1.5: Chronic Bowel Disorders <https://openprescribing.net/bnf/0105/>
+  *       1.5.1: Aminosalicylates <https://openprescribing.net/bnf/010501/>
+  *       1.5.2: Corticosteroids <https://openprescribing.net/bnf/010502/>
+  *       1.5.3: Drugs Affecting Immune Response
+    <https://openprescribing.net/bnf/010503/>
+  *       1.5.4: Food Allergy <https://openprescribing.net/bnf/010504/>
+  *    1.6: Laxatives <https://openprescribing.net/bnf/0106/>
+  *       1.6.1: Bulk-Forming Laxatives
+    <https://openprescribing.net/bnf/010601/>
+  *       1.6.2: Stimulant Laxatives
+    <https://openprescribing.net/bnf/010602/>
+  *       1.6.3: Faecal Softeners <https://openprescribing.net/bnf/010603/>
+  *       1.6.4: Osmotic Laxatives
+    <https://openprescribing.net/bnf/010604/>
+  *       1.6.5: Bowel Cleansing Preparations
+    <https://openprescribing.net/bnf/010605/>
+  *       1.6.6: Peripheral Opioid-Receptor Antagonists
+    <https://openprescribing.net/bnf/010606/>
+  *       1.6.7: Other Drugs Used In Constipation
+    <https://openprescribing.net/bnf/010607/>
+  *    1.7: Local Prepn for Anal & Rectal Disorders
+    <https://openprescribing.net/bnf/0107/>
+  *       1.7.1: Soothing Haemorrhoidal Preparations
+    <https://openprescribing.net/bnf/010701/>
+  *       1.7.2: Co Haemorrhoidal Prep's + Corticosteroid
+    <https://openprescribing.net/bnf/010702/>
+  *       1.7.3: Rectal Sclerosants
+    <https://openprescribing.net/bnf/010703/>
+  *       1.7.4: Management of Anal Fissures
+    <https://openprescribing.net/bnf/010704/>
+  *    1.8: Stoma Care <https://openprescribing.net/bnf/0108/>
+  *       1.8.1: Local Care of Stoma
+    <https://openprescribing.net/bnf/010801/>
+  *    1.9: Drugs Affecting Intestinal Secretions
+    <https://openprescribing.net/bnf/0109/>
+  *       1.9.1: Drugs Affecting Biliary Composition&Flow
+    <https://openprescribing.net/bnf/010901/>
+  *       1.9.4: Pancreatin <https://openprescribing.net/bnf/010904/>
+  * 2: Cardiovascular System <https://openprescribing.net/bnf/02/>
+  *    2.1: Positive Inotropic Drugs
+    <https://openprescribing.net/bnf/0201/>
+  *       2.1.1: Cardiac Glycosides
+    <https://openprescribing.net/bnf/020101/>
+  *       2.1.2: Phosphodiesterase Type-3 Inhibitors
+    <https://openprescribing.net/bnf/020102/>
+  *    2.2: Diuretics <https://openprescribing.net/bnf/0202/>
+  *       2.2.1: Thiazides And Related Diuretics
+    <https://openprescribing.net/bnf/020201/>
+  *       2.2.2: Loop Diuretics <https://openprescribing.net/bnf/020202/>
+  *       2.2.3: Pot-Sparing Diuretics&Aldosterone Antag
+    <https://openprescribing.net/bnf/020203/>
+  *       2.2.4: Potassium Sparing Diuretics & Compounds
+    <https://openprescribing.net/bnf/020204/>
+  *       2.2.5: Osmotic Diuretics
+    <https://openprescribing.net/bnf/020205/>
+  *       2.2.8: Diuretics With Potassium
+    <https://openprescribing.net/bnf/020208/>
+  *    2.3: Anti-Arrhythmic Drugs <https://openprescribing.net/bnf/0203/>
+  *       2.3.2: Drugs For Arrhythmias
+    <https://openprescribing.net/bnf/020302/>
+  *    2.4: Beta-Adrenoceptor Blocking Drugs
+    <https://openprescribing.net/bnf/0204/>
+  *    2.5: Hypertension and Heart Failure
+    <https://openprescribing.net/bnf/0205/>
+  *       2.5.1: Vasodilator Antihypertensive Drugs
+    <https://openprescribing.net/bnf/020501/>
+  *       2.5.2: Centrally-Acting Antihypertensive Drugs
+    <https://openprescribing.net/bnf/020502/>
+  *       2.5.3: Adrenergic Neurone Blocking Drugs
+    <https://openprescribing.net/bnf/020503/>
+  *       2.5.4: Alpha-Adrenoceptor Blocking Drugs
+    <https://openprescribing.net/bnf/020504/>
+  *       2.5.5: Renin-Angiotensin System Drugs
+    <https://openprescribing.net/bnf/020505/>
+  *       2.5.8: Other Adrenergic Neurone Blocking Drugs
+    <https://openprescribing.net/bnf/020508/>
+  *    2.6: Nit,Calc Block & Other Antianginal Drugs
+    <https://openprescribing.net/bnf/0206/>
+  *       2.6.1: Nitrates <https://openprescribing.net/bnf/020601/>
+  *       2.6.2: Calcium-Channel Blockers
+    <https://openprescribing.net/bnf/020602/>
+  *       2.6.3: Other Antianginal Drugs
+    <https://openprescribing.net/bnf/020603/>
+  *       2.6.4: Peripheral Vasodilators & Related Drugs
+    <https://openprescribing.net/bnf/020604/>
+  *    2.7: Sympathomimetics <https://openprescribing.net/bnf/0207/>
+  *       2.7.1: Inotropic Sympathomimetics
+    <https://openprescribing.net/bnf/020701/>
+  *       2.7.2: Vasoconstrictor Sympathomimetics
+    <https://openprescribing.net/bnf/020702/>
+  *       2.7.3: Cardiopulmonary Resuscitation
+    <https://openprescribing.net/bnf/020703/>
+  *    2.8: Anticoagulants And Protamine
+    <https://openprescribing.net/bnf/0208/>
+  *       2.8.1: Parenteral Anticoagulants
+    <https://openprescribing.net/bnf/020801/>
+  *       2.8.2: Oral Anticoagulants
+    <https://openprescribing.net/bnf/020802/>
+  *       2.8.3: Protamine Sulfate
+    <https://openprescribing.net/bnf/020803/>
+  *    2.9: Antiplatelet Drugs <https://openprescribing.net/bnf/0209/>
+  *    2.10: Stable Angina, Acute/Crnry Synd&Fibrin
+    <https://openprescribing.net/bnf/0210/>
+  *       2.10.2: Fibrinolytic Drugs
+    <https://openprescribing.net/bnf/021002/>
+  *    2.11: Antifibrinolytic Drugs & Haemostatics
+    <https://openprescribing.net/bnf/0211/>
+  *    2.12: Lipid-Regulating Drugs <https://openprescribing.net/bnf/0212/>
+  *    2.13: Local Sclerosants <https://openprescribing.net/bnf/0213/>
+  * 3: Respiratory System <https://openprescribing.net/bnf/03/>
+  *    3.1: Bronchodilators <https://openprescribing.net/bnf/0301/>
+  *       3.1.1: Adrenoceptor Agonists
+    <https://openprescribing.net/bnf/030101/>
+  *       3.1.2: Antimuscarinic Bronchodilators
+    <https://openprescribing.net/bnf/030102/>
+  *       3.1.3: Theophylline <https://openprescribing.net/bnf/030103/>
+  *       3.1.4: Compound Bronchodilator Preparations
+    <https://openprescribing.net/bnf/030104/>
+  *    3.2: Corticosteroids (Respiratory)
+    <https://openprescribing.net/bnf/0302/>
+  *    3.3: Cromoglycate,Rel,Leukotriene Antagonists
+    <https://openprescribing.net/bnf/0303/>
+  *       3.3.1: Cromoglycate and Related Therapy
+    <https://openprescribing.net/bnf/030301/>
+  *       3.3.2: Leukotriene Receptor Antagonists
+    <https://openprescribing.net/bnf/030302/>
+  *       3.3.3: Phosphodiesterase Type-4 Inhibitors
+    <https://openprescribing.net/bnf/030303/>
+  *    3.4: Antihist, Hyposensit & Allergic Emergen
+    <https://openprescribing.net/bnf/0304/>
+  *       3.4.1: Antihistamines <https://openprescribing.net/bnf/030401/>
+  *       3.4.2: Allergen Immunotherapy
+    <https://openprescribing.net/bnf/030402/>
+  *       3.4.3: Allergic Emergencies
+    <https://openprescribing.net/bnf/030403/>
+  *    3.5: Resp Stimulants & Pulmonary Surfactants
+    <https://openprescribing.net/bnf/0305/>
+  *       3.5.1: Respiratory Stimulants
+    <https://openprescribing.net/bnf/030501/>
+  *    3.6: Oxygen <https://openprescribing.net/bnf/0306/>
+  *    3.7: Mucolytics <https://openprescribing.net/bnf/0307/>
+  *    3.8: Aromatic Inhalations <https://openprescribing.net/bnf/0308/>
+  *    3.9: Cough Preparations <https://openprescribing.net/bnf/0309/>
+  *       3.9.1: Cough Suppressants
+    <https://openprescribing.net/bnf/030901/>
+  *       3.9.2: Expectorant & Demulcent Cough Prep's
+    <https://openprescribing.net/bnf/030902/>
+  *    3.10: Systemic Nasal Decongestants
+    <https://openprescribing.net/bnf/0310/>
+  *    3.11: Antifibrotics <https://openprescribing.net/bnf/0311/>
+  *       3.11.1: Antifibrotics <https://openprescribing.net/bnf/031101/>
+  * 4: Central Nervous System <https://openprescribing.net/bnf/04/>
+  *    4.1: Hypnotics And Anxiolytics
+    <https://openprescribing.net/bnf/0401/>
+  *       4.1.1: Hypnotics <https://openprescribing.net/bnf/040101/>
+  *       4.1.2: Anxiolytics <https://openprescribing.net/bnf/040102/>
+  *       4.1.3: Barbiturates <https://openprescribing.net/bnf/040103/>
+  *    4.2: Drugs Used In Psychoses & Rel.Disorders
+    <https://openprescribing.net/bnf/0402/>
+  *       4.2.1: Antipsychotic Drugs
+    <https://openprescribing.net/bnf/040201/>
+  *       4.2.2: Antipsychotic Depot Injections
+    <https://openprescribing.net/bnf/040202/>
+  *       4.2.3: Drugs Used for Mania and Hypomania
+    <https://openprescribing.net/bnf/040203/>
+  *    4.3: Antidepressant Drugs <https://openprescribing.net/bnf/0403/>
+  *       4.3.1: Tricyclic & Related Antidepressant Drugs
+    <https://openprescribing.net/bnf/040301/>
+  *       4.3.2: Monoamine-Oxidase Inhibitors (Maois)
+    <https://openprescribing.net/bnf/040302/>
+  *       4.3.3: Selective Serotonin Re-Uptake Inhibitors
+    <https://openprescribing.net/bnf/040303/>
+  *       4.3.4: Other Antidepressant Drugs
+    <https://openprescribing.net/bnf/040304/>
+  *    4.4: CNS Stimulants and drugs used for ADHD
+    <https://openprescribing.net/bnf/0404/>
+  *    4.5: Obesity <https://openprescribing.net/bnf/0405/>
+  *       4.5.1: Gastro-Intestinal Anti-Obesity Drugs
+    <https://openprescribing.net/bnf/040501/>
+  *       4.5.2: Centrally-Acting Appetite Suppressants
+    <https://openprescribing.net/bnf/040502/>
+  *    4.6: Drugs Used In Nausea And Vertigo
+    <https://openprescribing.net/bnf/0406/>
+  *    4.7: Analgesics <https://openprescribing.net/bnf/0407/>
+  *       4.7.1: Non-Opioid Analgesics And Compound Prep
+    <https://openprescribing.net/bnf/040701/>
+  *       4.7.2: Opioid Analgesics
+    <https://openprescribing.net/bnf/040702/>
+  *       4.7.3: Neuropathic Pain <https://openprescribing.net/bnf/040703/>
+  *       4.7.4: Antimigraine Drugs
+    <https://openprescribing.net/bnf/040704/>
+  *    4.8: Antiepileptic Drugs <https://openprescribing.net/bnf/0408/>
+  *       4.8.1: Control Of Epilepsy
+    <https://openprescribing.net/bnf/040801/>
+  *       4.8.2: Drugs Used In Status Epilepticus
+    <https://openprescribing.net/bnf/040802/>
+  *    4.9: Drugs Used In Park'ism/Related Disorders
+    <https://openprescribing.net/bnf/0409/>
+  *       4.9.1: Dopaminergic Drugs Used In Parkinsonism
+    <https://openprescribing.net/bnf/040901/>
+  *       4.9.2: Antimuscarinic Drugs Used In Parkin'ism
+    <https://openprescribing.net/bnf/040902/>
+  *       4.9.3: Essentialtremor,Chorea,Tics&Reldisorders
+    <https://openprescribing.net/bnf/040903/>
+  *    4.10: Drugs Used In Substance Dependence
+    <https://openprescribing.net/bnf/0410/>
+  *       4.10.1: Alcohol Dependence
+    <https://openprescribing.net/bnf/041001/>
+  *       4.10.2: Nicotine Dependence
+    <https://openprescribing.net/bnf/041002/>
+  *       4.10.3: Opioid Dependence
+    <https://openprescribing.net/bnf/041003/>
+  *    4.11: Dementia <https://openprescribing.net/bnf/0411/>
+  * 5: Infections <https://openprescribing.net/bnf/05/>
+  *    5.1: Antibacterial Drugs <https://openprescribing.net/bnf/0501/>
+  *       5.1.1: Penicillins <https://openprescribing.net/bnf/050101/>
+  *       5.1.2: Cephalosporins and other Beta-Lactams
+    <https://openprescribing.net/bnf/050102/>
+  *       5.1.3: Tetracyclines <https://openprescribing.net/bnf/050103/>
+  *       5.1.4: Aminoglycosides <https://openprescribing.net/bnf/050104/>
+  *       5.1.5: Macrolides <https://openprescribing.net/bnf/050105/>
+  *       5.1.6: Clindamycin and Lincomycin
+    <https://openprescribing.net/bnf/050106/>
+  *       5.1.7: Some Other Antibacterials
+    <https://openprescribing.net/bnf/050107/>
+  *       5.1.8: Sulfonamides And Trimethoprim
+    <https://openprescribing.net/bnf/050108/>
+  *       5.1.9: Antituberculosis Drugs
+    <https://openprescribing.net/bnf/050109/>
+  *       5.1.10: Antileprotic Drugs
+    <https://openprescribing.net/bnf/050110/>
+  *       5.1.11: Metronidazole, Tinidazole & Ornidazole
+    <https://openprescribing.net/bnf/050111/>
+  *       5.1.12: Quinolones <https://openprescribing.net/bnf/050112/>
+  *       5.1.13: Urinary-Tract Infections
+    <https://openprescribing.net/bnf/050113/>
+  *    5.2: Antifungal Drugs <https://openprescribing.net/bnf/0502/>
+  *       5.2.1: Triazole Antifungals
+    <https://openprescribing.net/bnf/050201/>
+  *       5.2.2: Imidazole Antifungals
+    <https://openprescribing.net/bnf/050202/>
+  *       5.2.3: Polyene Antifungals
+    <https://openprescribing.net/bnf/050203/>
+  *       5.2.4: Echinocandin Antifungals
+    <https://openprescribing.net/bnf/050204/>
+  *       5.2.5: Other Antifungals
+    <https://openprescribing.net/bnf/050205/>
+  *    5.3: Antiviral Drugs <https://openprescribing.net/bnf/0503/>
+  *       5.3.1: HIV Infection <https://openprescribing.net/bnf/050301/>
+  *       5.3.2: Herpesvirus Infections
+    <https://openprescribing.net/bnf/050302/>
+  *       5.3.3: Viral Hepatitis <https://openprescribing.net/bnf/050303/>
+  *       5.3.4: Influenza <https://openprescribing.net/bnf/050304/>
+  *       5.3.5: Respiratory Syncytial Virus
+    <https://openprescribing.net/bnf/050305/>
+  *    5.4: Antiprotozoal Drugs <https://openprescribing.net/bnf/0504/>
+  *       5.4.1: Antimalarials <https://openprescribing.net/bnf/050401/>
+  *       5.4.2: Amoebicides <https://openprescribing.net/bnf/050402/>
+  *       5.4.4: Antigiardial Drugs
+    <https://openprescribing.net/bnf/050404/>
+  *       5.4.5: Leishmaniacides <https://openprescribing.net/bnf/050405/>
+  *       5.4.8: Drugs For Pneumocystis Pneumonia
+    <https://openprescribing.net/bnf/050408/>
+  *    5.5: Anthelmintics <https://openprescribing.net/bnf/0505/>
+  *       5.5.1: Drugs For Threadworms
+    <https://openprescribing.net/bnf/050501/>
+  *       5.5.2: Ascaricides <https://openprescribing.net/bnf/050502/>
+  *       5.5.3: Drugs For Tapeworm Infections
+    <https://openprescribing.net/bnf/050503/>
+  *       5.5.5: Schistosomicides <https://openprescribing.net/bnf/050505/>
+  *       5.5.6: Filaricides <https://openprescribing.net/bnf/050506/>
+  * 6: Endocrine System <https://openprescribing.net/bnf/06/>
+  *    6.1: Drugs Used In Diabetes <https://openprescribing.net/bnf/0601/>
+  *       6.1.1: Insulin <https://openprescribing.net/bnf/060101/>
+  *       6.1.2: Antidiabetic Drugs
+    <https://openprescribing.net/bnf/060102/>
+  *       6.1.4: Treatment Of Hypoglycaemia
+    <https://openprescribing.net/bnf/060104/>
+  *       6.1.6: Diabetic Diagnostic & Monitoring Agents
+    <https://openprescribing.net/bnf/060106/>
+  *    6.2: Thyroid And Antithyroid Drugs
+    <https://openprescribing.net/bnf/0602/>
+  *       6.2.1: Thyroid Hormones <https://openprescribing.net/bnf/060201/>
+  *       6.2.2: Antithyroid Drugs
+    <https://openprescribing.net/bnf/060202/>
+  *    6.3: Corticosteroids (Endocrine)
+    <https://openprescribing.net/bnf/0603/>
+  *       6.3.1: Replacement Therapy
+    <https://openprescribing.net/bnf/060301/>
+  *       6.3.2: Glucocorticoid Therapy
+    <https://openprescribing.net/bnf/060302/>
+  *    6.4: Sex Hormones <https://openprescribing.net/bnf/0604/>
+  *       6.4.1: Female Sex Hormones & Their Modulators
+    <https://openprescribing.net/bnf/060401/>
+  *       6.4.2: Male Sex Hormones And Antagonists
+    <https://openprescribing.net/bnf/060402/>
+  *       6.4.3: Anabolic Steroids
+    <https://openprescribing.net/bnf/060403/>
+  *    6.5: Hypothalamic&Pituitary Hormones&Antioest
+    <https://openprescribing.net/bnf/0605/>
+  *       6.5.1: Hypothalamic&Ant Pituit Hormone&Antioest
+    <https://openprescribing.net/bnf/060501/>
+  *       6.5.2: Posterior Pituitary Hormones&Antagonists
+    <https://openprescribing.net/bnf/060502/>
+  *    6.6: Drugs Affecting Bone Metabolism
+    <https://openprescribing.net/bnf/0606/>
+  *       6.6.1: Calcitonin and Parathyroid Hormone
+    <https://openprescribing.net/bnf/060601/>
+  *       6.6.2: Bisphosphonates and Other Drugs
+    <https://openprescribing.net/bnf/060602/>
+  *    6.7: Other Endocrine Drugs <https://openprescribing.net/bnf/0607/>
+  *       6.7.1: Bromocriptine & Other Dopaminergic Drugs
+    <https://openprescribing.net/bnf/060701/>
+  *       6.7.2: Drugs affecting Gonadotrophins
+    <https://openprescribing.net/bnf/060702/>
+  *       6.7.3: Metyrapone <https://openprescribing.net/bnf/060703/>
+  *       6.7.4: Somatomedins <https://openprescribing.net/bnf/060704/>
+  *       6.7.5: Metreleptin <https://openprescribing.net/bnf/060705/>
+  * 7: Obstetrics,Gynae+Urinary Tract Disorders
+    <https://openprescribing.net/bnf/07/>
+  *    7.1: Drugs Used In Obstetrics
+    <https://openprescribing.net/bnf/0701/>
+  *       7.1.1: Prostaglandins And Oxytocics
+    <https://openprescribing.net/bnf/070101/>
+  *       7.1.3: Myometrial Relaxants
+    <https://openprescribing.net/bnf/070103/>
+  *    7.2: Treatment Of Vaginal & Vulval Conditions
+    <https://openprescribing.net/bnf/0702/>
+  *       7.2.1: Preparations For Vaginal/Vulval Changes
+    <https://openprescribing.net/bnf/070201/>
+  *       7.2.2: Vaginal and Vulval Infections
+    <https://openprescribing.net/bnf/070202/>
+  *    7.3: Contraceptives <https://openprescribing.net/bnf/0703/>
+  *       7.3.1: Combined Hormonal Contraceptives/Systems
+    <https://openprescribing.net/bnf/070301/>
+  *       7.3.2: Progestogen-only Contraceptives
+    <https://openprescribing.net/bnf/070302/>
+  *       7.3.3: Spermicidal Contraceptives
+    <https://openprescribing.net/bnf/070303/>
+  *       7.3.5: Emergency Contraception
+    <https://openprescribing.net/bnf/070305/>
+  *    7.4: Drugs For Genito-Urinary Disorders
+    <https://openprescribing.net/bnf/0704/>
+  *       7.4.1: Drugs For Urinary Retention
+    <https://openprescribing.net/bnf/070401/>
+  *       7.4.2: Drugs/Urin'y Frequ'cy Enuresis & Incont
+    <https://openprescribing.net/bnf/070402/>
+  *       7.4.3: Drugs Used In Urological Pain
+    <https://openprescribing.net/bnf/070403/>
+  *       7.4.4: Bladder Instillations/Urological Surgery
+    <https://openprescribing.net/bnf/070404/>
+  *       7.4.5: Drugs For Erectile Dysfunction
+    <https://openprescribing.net/bnf/070405/>
+  *       7.4.6: Drugs For Premature Ejaculation
+    <https://openprescribing.net/bnf/070406/>
+  * 8: Malignant Disease & Immunosuppression
+    <https://openprescribing.net/bnf/08/>
+  *    8.1: Cytotoxic Drugs <https://openprescribing.net/bnf/0801/>
+  *       8.1.1: Alkylating Drugs <https://openprescribing.net/bnf/080101/>
+  *       8.1.2: Anthracyclines & Cytotoxic Antibiotics
+    <https://openprescribing.net/bnf/080102/>
+  *       8.1.3: Antimetabolites <https://openprescribing.net/bnf/080103/>
+  *       8.1.4: Vinca Alkaloids And Etoposide
+    <https://openprescribing.net/bnf/080104/>
+  *       8.1.5: Other Antineoplastic Drugs
+    <https://openprescribing.net/bnf/080105/>
+  *       8.1.6: Other Cytotoxic Drugs
+    <https://openprescribing.net/bnf/080106/>
+  *    8.2: Drugs Affecting The Immune Response
+    <https://openprescribing.net/bnf/0802/>
+  *       8.2.1: Antiproliferative Immunosuppressants
+    <https://openprescribing.net/bnf/080201/>
+  *       8.2.2: Cortico'oids & Other Immunosuppressants
+    <https://openprescribing.net/bnf/080202/>
+  *       8.2.3: Anti-lymphocyte Monoclonal Antibodies
+    <https://openprescribing.net/bnf/080203/>
+  *       8.2.4: Other Immunomodulating Drugs
+    <https://openprescribing.net/bnf/080204/>
+  *    8.3: Sex Hormones & Antag In Malig Disease
+    <https://openprescribing.net/bnf/0803/>
+  *       8.3.1: Oestrogens <https://openprescribing.net/bnf/080301/>
+  *       8.3.2: Progestogens <https://openprescribing.net/bnf/080302/>
+  *       8.3.4: Hormone Antagonists
+    <https://openprescribing.net/bnf/080304/>
+  * 9: Nutrition And Blood <https://openprescribing.net/bnf/09/>
+  *    9.1: Anaemias + Other Blood Disorders
+    <https://openprescribing.net/bnf/0901/>
+  *       9.1.1: Iron-Deficiency Anaemias
+    <https://openprescribing.net/bnf/090101/>
+  *       9.1.2: Drugs used in Megaloblastic Anaemias
+    <https://openprescribing.net/bnf/090102/>
+  *       9.1.3: Hypoplastic/Haemolytic & Renal Anaemias
+    <https://openprescribing.net/bnf/090103/>
+  *       9.1.4: Drugs used in Platelet Disorders
+    <https://openprescribing.net/bnf/090104/>
+  *       9.1.6: Drugs used in Neutropenia
+    <https://openprescribing.net/bnf/090106/>
+  *    9.2: Fluids And Electrolytes <https://openprescribing.net/bnf/0902/>
+  *       9.2.1: Oral Prepn for Fluid & Electrolyte Imb
+    <https://openprescribing.net/bnf/090201/>
+  *       9.2.2: Parent Prepn for Fluid & Electrolyte Imb
+    <https://openprescribing.net/bnf/090202/>
+  *    9.3: Intravenous Nutrition <https://openprescribing.net/bnf/0903/>
+  *    9.4: Oral Nutrition <https://openprescribing.net/bnf/0904/>
+  *       9.4.1: Foods For Special Diets
+    <https://openprescribing.net/bnf/090401/>
+  *       9.4.2: Enteral Nutrition
+    <https://openprescribing.net/bnf/090402/>
+  *    9.5: Minerals <https://openprescribing.net/bnf/0905/>
+  *       9.5.1: Calcium And Magnesium
+    <https://openprescribing.net/bnf/090501/>
+  *       9.5.2: Phosphorus <https://openprescribing.net/bnf/090502/>
+  *       9.5.3: Fluoride <https://openprescribing.net/bnf/090503/>
+  *       9.5.4: Zinc & Other Minerals
+    <https://openprescribing.net/bnf/090504/>
+  *       9.5.5: Selenium <https://openprescribing.net/bnf/090505/>
+  *    9.6: Vitamins <https://openprescribing.net/bnf/0906/>
+  *       9.6.1: Vitamin A <https://openprescribing.net/bnf/090601/>
+  *       9.6.2: Vitamin B Group <https://openprescribing.net/bnf/090602/>
+  *       9.6.3: Vitamin C <https://openprescribing.net/bnf/090603/>
+  *       9.6.4: Vitamin D <https://openprescribing.net/bnf/090604/>
+  *       9.6.5: Vitamin E <https://openprescribing.net/bnf/090605/>
+  *       9.6.6: Vitamin K <https://openprescribing.net/bnf/090606/>
+  *       9.6.7: Multivitamin Preparations
+    <https://openprescribing.net/bnf/090607/>
+  *       9.6.8: Other Vitamin Formulations
+    <https://openprescribing.net/bnf/090608/>
+  *    9.7: Bitters And Tonics <https://openprescribing.net/bnf/0907/>
+  *    9.8: Metabolic Disorders <https://openprescribing.net/bnf/0908/>
+  *       9.8.1: Drugs Used in Metabolic Disorders
+    <https://openprescribing.net/bnf/090801/>
+  *    9.9: Foods <https://openprescribing.net/bnf/0909/>
+  *    9.10: Compound Vit/Mineral Formulations
+    <https://openprescribing.net/bnf/0910/>
+  *    9.11: Health Supplements <https://openprescribing.net/bnf/0911/>
+  *       9.11.1: Amino Acids & Nutritional Agents
+    <https://openprescribing.net/bnf/091101/>
+  *       9.11.2: Enzymes <https://openprescribing.net/bnf/091102/>
+  *       9.11.3: Glandular <https://openprescribing.net/bnf/091103/>
+  *       9.11.4: Digestive Aids <https://openprescribing.net/bnf/091104/>
+  *    9.12: Other Health Supplements
+    <https://openprescribing.net/bnf/0912/>
+  * 10: Musculoskeletal & Joint Diseases
+    <https://openprescribing.net/bnf/10/>
+  *    10.1: Drugs Used In Rheumatic Diseases & Gout
+    <https://openprescribing.net/bnf/1001/>
+  *       10.1.1: Non-Steroidal Anti-Inflammatory Drugs
+    <https://openprescribing.net/bnf/100101/>
+  *       10.1.2: Corticosteroids <https://openprescribing.net/bnf/100102/>
+  *       10.1.3: Rheumatic Disease Suppressant Drugs
+    <https://openprescribing.net/bnf/100103/>
+  *       10.1.4: Gout & Cytotoxic Induced Hyperuicaemia
+    <https://openprescribing.net/bnf/100104/>
+  *       10.1.5: Other Drugs For Rheumatic Diseases
+    <https://openprescribing.net/bnf/100105/>
+  *    10.2: Drugs Used In Neuromuscular Disorders
+    <https://openprescribing.net/bnf/1002/>
+  *       10.2.1: Dgs Which Enhance Neuromus'ar Transmi'on
+    <https://openprescribing.net/bnf/100201/>
+  *       10.2.2: Skeletal Muscle Relaxants
+    <https://openprescribing.net/bnf/100202/>
+  *    10.3: Soft-Tissue Disorders & Topical Pain Rel
+    <https://openprescribing.net/bnf/1003/>
+  *       10.3.1: Enzymes <https://openprescribing.net/bnf/100301/>
+  *       10.3.2: Rubefacients,Top NSAIDS,Capsaicin & Poul
+    <https://openprescribing.net/bnf/100302/>
+  * 11: Eye <https://openprescribing.net/bnf/11/>
+  *    11.3: Anti-Infective Eye Preparations
+    <https://openprescribing.net/bnf/1103/>
+  *       11.3.1: Antibacterials <https://openprescribing.net/bnf/110301/>
+  *       11.3.2: Antifungals <https://openprescribing.net/bnf/110302/>
+  *       11.3.3: Antivirals <https://openprescribing.net/bnf/110303/>
+  *    11.4: Corti'roids & Other Anti-Inflamm.Preps.
+    <https://openprescribing.net/bnf/1104/>
+  *       11.4.1: Corticosteroids <https://openprescribing.net/bnf/110401/>
+  *       11.4.2: Other Anti-Inflammatory Preparations
+    <https://openprescribing.net/bnf/110402/>
+  *    11.5: Mydriatics And Cycloplegics
+    <https://openprescribing.net/bnf/1105/>
+  *    11.6: Treatment Of Glaucoma <https://openprescribing.net/bnf/1106/>
+  *    11.7: Local Anaesthetics <https://openprescribing.net/bnf/1107/>
+  *    11.8: Miscellaneous Ophthalmic Preparations
+    <https://openprescribing.net/bnf/1108/>
+  *       11.8.1: Tear Deficiency,Eye Lubricant/Astringent
+    <https://openprescribing.net/bnf/110801/>
+  *       11.8.2: Ocular Diagnos/Peri-op Prepn&Photodyn Tt
+    <https://openprescribing.net/bnf/110802/>
+  *       11.8.3: Other Eye Preparations
+    <https://openprescribing.net/bnf/110803/>
+  * 12: Ear, Nose And Oropharynx <https://openprescribing.net/bnf/12/>
+  *    12.1: Drugs Acting On The Ear
+    <https://openprescribing.net/bnf/1201/>
+  *       12.1.1: Otitis Externa <https://openprescribing.net/bnf/120101/>
+  *       12.1.3: Removal of Ear Wax & other Substances
+    <https://openprescribing.net/bnf/120103/>
+  *    12.2: Drugs Acting On The Nose
+    <https://openprescribing.net/bnf/1202/>
+  *       12.2.1: Drugs Used In Nasal Allergy
+    <https://openprescribing.net/bnf/120201/>
+  *       12.2.2: Topical Nasal Decongestants
+    <https://openprescribing.net/bnf/120202/>
+  *       12.2.3: Nasal Prepn for Infection
+    <https://openprescribing.net/bnf/120203/>
+  *    12.3: Drugs Acting On The Oropharynx
+    <https://openprescribing.net/bnf/1203/>
+  *       12.3.1: Drugs For Oral Ulceration & Inflammation
+    <https://openprescribing.net/bnf/120301/>
+  *       12.3.2: Oropharyngeal Anti-Infective Drugs
+    <https://openprescribing.net/bnf/120302/>
+  *       12.3.3: Lozenges & Sprays
+    <https://openprescribing.net/bnf/120303/>
+  *       12.3.4: Mouth-Washes, Gargles, And Dentifrices
+    <https://openprescribing.net/bnf/120304/>
+  *       12.3.5: Treatment Of Dry Mouth
+    <https://openprescribing.net/bnf/120305/>
+  * 13: Skin <https://openprescribing.net/bnf/13/>
+  *    13.1: Management of Skin Conditions
+    <https://openprescribing.net/bnf/1301/>
+  *       13.1.1: Management of Skin Conditions
+    <https://openprescribing.net/bnf/130101/>
+  *    13.2: Emollient & Barrier Preparations
+    <https://openprescribing.net/bnf/1302/>
+  *       13.2.1: Emollients <https://openprescribing.net/bnf/130201/>
+  *       13.2.2: Barrier Preparations
+    <https://openprescribing.net/bnf/130202/>
+  *       13.2.3: Dusting-Powders <https://openprescribing.net/bnf/130203/>
+  *    13.3: Top Local Anaesthetics & Antipruritics
+    <https://openprescribing.net/bnf/1303/>
+  *    13.4: Topical Corticosteroids
+    <https://openprescribing.net/bnf/1304/>
+  *    13.5: Preparations For Eczema And Psoriasis
+    <https://openprescribing.net/bnf/1305/>
+  *       13.5.1: Preparations For Eczema
+    <https://openprescribing.net/bnf/130501/>
+  *       13.5.2: Preparations For Psoriasis
+    <https://openprescribing.net/bnf/130502/>
+  *       13.5.3: Drugs Affecting The Immune Response
+    <https://openprescribing.net/bnf/130503/>
+  *    13.6: Acne and Rosacea <https://openprescribing.net/bnf/1306/>
+  *       13.6.1: Topical Preparations For Acne
+    <https://openprescribing.net/bnf/130601/>
+  *       13.6.2: Oral Preparations For Acne
+    <https://openprescribing.net/bnf/130602/>
+  *       13.6.3: Topical Preparation For Rosacea
+    <https://openprescribing.net/bnf/130603/>
+  *    13.7: Preparations For Warts And Calluses
+    <https://openprescribing.net/bnf/1307/>
+  *    13.8: Sunscreens And Camouflagers
+    <https://openprescribing.net/bnf/1308/>
+  *       13.8.1: Sunscreening Preparations
+    <https://openprescribing.net/bnf/130801/>
+  *       13.8.2: Camouflagers <https://openprescribing.net/bnf/130802/>
+  *    13.9: Shampoo&Other Preps For Scalp&Hair Cond
+    <https://openprescribing.net/bnf/1309/>
+  *    13.10: Anti-Infective Skin Preparations
+    <https://openprescribing.net/bnf/1310/>
+  *       13.10.1: Antibacterial Preparations
+    <https://openprescribing.net/bnf/131001/>
+  *       13.10.2: Antifungal Preparations
+    <https://openprescribing.net/bnf/131002/>
+  *       13.10.3: Antiviral Preparations
+    <https://openprescribing.net/bnf/131003/>
+  *       13.10.4: Parasiticidal Preparations
+    <https://openprescribing.net/bnf/131004/>
+  *       13.10.5: Prep's For Minor Cuts & Abrasions
+    <https://openprescribing.net/bnf/131005/>
+  *    13.11: Skin Cleansers,Antiseptics & Desloughing
+    <https://openprescribing.net/bnf/1311/>
+  *       13.11.1: Alcohols & Saline
+    <https://openprescribing.net/bnf/131101/>
+  *       13.11.2: Chlorhexidine Salts
+    <https://openprescribing.net/bnf/131102/>
+  *       13.11.3: Cationic Surfactants & Soaps
+    <https://openprescribing.net/bnf/131103/>
+  *       13.11.4: Chlorine & Iodine
+    <https://openprescribing.net/bnf/131104/>
+  *       13.11.5: Phenolics <https://openprescribing.net/bnf/131105/>
+  *       13.11.6: Oxidisers & Dyes
+    <https://openprescribing.net/bnf/131106/>
+  *       13.11.7: Desloughing Agents
+    <https://openprescribing.net/bnf/131107/>
+  *    13.12: Antiperspirants <https://openprescribing.net/bnf/1312/>
+  *    13.13: Wound Management Products
+    <https://openprescribing.net/bnf/1313/>
+  *       13.13.1: Medicated Stockings
+    <https://openprescribing.net/bnf/131301/>
+  *       13.13.8: Gel And Colloid Dressings
+    <https://openprescribing.net/bnf/131308/>
+  *    13.14: Topical Circulatory Preparations
+    <https://openprescribing.net/bnf/1314/>
+  *    13.15: Miscellaneous Topical Preparations
+    <https://openprescribing.net/bnf/1315/>
+  * 14: Immunological Products & Vaccines
+    <https://openprescribing.net/bnf/14/>
+  *    14.3: Diagnostic Vaccines <https://openprescribing.net/bnf/1403/>
+  *    14.4: Vaccines And Antisera <https://openprescribing.net/bnf/1404/>
+  *    14.5: Immunoglobulins <https://openprescribing.net/bnf/1405/>
+  *       14.5.1: Normal Immunoglobulin
+    <https://openprescribing.net/bnf/140501/>
+  *       14.5.2: Disease-Specific Immunoglobulins
+    <https://openprescribing.net/bnf/140502/>
+  *       14.5.3: Anti-D (Rho) Immunoglobulin
+    <https://openprescribing.net/bnf/140503/>
+  * 15: Anaesthesia <https://openprescribing.net/bnf/15/>
+  *    15.1: General Anaesthesia <https://openprescribing.net/bnf/1501/>
+  *       15.1.1: Intravenous Anaesthetics
+    <https://openprescribing.net/bnf/150101/>
+  *       15.1.2: Inhalational Anaesthetics
+    <https://openprescribing.net/bnf/150102/>
+  *       15.1.3: Antimuscarinic Drugs
+    <https://openprescribing.net/bnf/150103/>
+  *       15.1.4: Sedative & Analgesic Peri-Operative Drgs
+    <https://openprescribing.net/bnf/150104/>
+  *       15.1.5: Neuromuscular Blocking Drugs
+    <https://openprescribing.net/bnf/150105/>
+  *       15.1.6: Anticholinesterases Used in Anaesthesia
+    <https://openprescribing.net/bnf/150106/>
+  *       15.1.7: Antagonists for Respiratory Depression
+    <https://openprescribing.net/bnf/150107/>
+  *    15.2: Local Anaesthesia <https://openprescribing.net/bnf/1502/>
+  *       15.2.1: Local Anaesthetics
+    <https://openprescribing.net/bnf/150201/>
+  * 18: Preparations used in Diagnosis
+    <https://openprescribing.net/bnf/18/>
+  *    18.3: X-Ray Contrast Media <https://openprescribing.net/bnf/1803/>
+  * 19: Other Drugs And Preparations <https://openprescribing.net/bnf/19/>
+  *    19.1: Alcohol, Wines & Spirits
+    <https://openprescribing.net/bnf/1901/>
+  *    19.2: Selective Preparations <https://openprescribing.net/bnf/1902/>
+  *       19.2.1: Individually Formulated Preps-Bought In
+    <https://openprescribing.net/bnf/190201/>
+  *       19.2.2: Individ Formulated Preps-Prepared Extemp
+    <https://openprescribing.net/bnf/190202/>
+  *       19.2.3: Homeopathic Preparations
+    <https://openprescribing.net/bnf/190203/>
+  *       19.2.5: Household & Other Over The Counter Lines
+    <https://openprescribing.net/bnf/190205/>
+  *       19.2.7: Poisoning Antidotes
+    <https://openprescribing.net/bnf/190207/>
+  *    19.4: Single Substances <https://openprescribing.net/bnf/1904/>
+  *    19.5: Other Preparations <https://openprescribing.net/bnf/1905/>
+  *    19.6: Acids <https://openprescribing.net/bnf/1906/>
+  *       19.6.1: Concentrated Waters
+    <https://openprescribing.net/bnf/190601/>
+  *       19.6.3: Extracts <https://openprescribing.net/bnf/190603/>
+  *       19.6.5: Oils <https://openprescribing.net/bnf/190605/>
+  *       19.6.6: Tinctures <https://openprescribing.net/bnf/190606/>
+  *       19.6.7: Syrups <https://openprescribing.net/bnf/190607/>
+  *    19.7: Base/Dil/Susp Agents/Stabilisers
+    <https://openprescribing.net/bnf/1907/>
+  *    19.8: Colouring,Flavouring & Sweetening Agents
+    <https://openprescribing.net/bnf/1908/>
+  *    19.9: Disinfectants,Preserv&Sterilising Agents
+    <https://openprescribing.net/bnf/1909/>
+  *    19.13: Cordials/Soft Drinks <https://openprescribing.net/bnf/1913/>
+  *    19.14: Waters <https://openprescribing.net/bnf/1914/>
+  *       19.14.1: Sterile Water <https://openprescribing.net/bnf/191401/>
+  *       19.14.2: Purified Water <https://openprescribing.net/bnf/191402/>
+  *    19.15: Other Gases <https://openprescribing.net/bnf/1915/>
+  * 20: Dressings <https://openprescribing.net/bnf/20/>
+  *    20.1: Absorbent Cottons <https://openprescribing.net/bnf/2001/>
+  *    20.2: Arm Sling/Bandages <https://openprescribing.net/bnf/2002/>
+  *    20.3: Wound Management & Other Dressings
+    <https://openprescribing.net/bnf/2003/>
+  *    20.4: Gauzes & Gauze Tissue <https://openprescribing.net/bnf/2004/>
+  *    20.5: Tracheostomy & Laryngectomy Appliances
+    <https://openprescribing.net/bnf/2005/>
+  *    20.6: Foam <https://openprescribing.net/bnf/2006/>
+  *    20.7: Lints <https://openprescribing.net/bnf/2007/>
+  *    20.8: Plasters <https://openprescribing.net/bnf/2008/>
+  *    20.9: Stockinette <https://openprescribing.net/bnf/2009/>
+  *    20.10: Surgical Adhesive Tape
+    <https://openprescribing.net/bnf/2010/>
+  *    20.11: Surgical Sutures <https://openprescribing.net/bnf/2011/>
+  *    20.12: Swabs <https://openprescribing.net/bnf/2012/>
+  *    20.13: Unspecified Dressing <https://openprescribing.net/bnf/2013/>
+  *    20.14: Skin Closure Strips, Sterile
+    <https://openprescribing.net/bnf/2014/>
+  *    20.15: Skin Adhesive, Sterile
+    <https://openprescribing.net/bnf/2015/>
+  *    20.16: Tapeless Holders <https://openprescribing.net/bnf/2016/>
+  *    20.17: Cervical Collar <https://openprescribing.net/bnf/2017/>
+  *    20.18: Cellulose Wadding BP 1988
+    <https://openprescribing.net/bnf/2018/>
+  *    20.20: Silk Garments <https://openprescribing.net/bnf/2020/>
+  * 21: Appliances <https://openprescribing.net/bnf/21/>
+  *    21.1: Other Appliances <https://openprescribing.net/bnf/2101/>
+  *    21.2: Catheters <https://openprescribing.net/bnf/2102/>
+  *    21.3: Chiropody Appliances <https://openprescribing.net/bnf/2103/>
+  *    21.4: Contraceptive Devices <https://openprescribing.net/bnf/2104/>
+  *    21.5: Suprapubic Appliances <https://openprescribing.net/bnf/2105/>
+  *    21.6: Trusses <https://openprescribing.net/bnf/2106/>
+  *    21.7: Elastic Hosiery <https://openprescribing.net/bnf/2107/>
+  *    21.8: Oxygen Masks <https://openprescribing.net/bnf/2108/>
+  *    21.9: Special Sanction Authorisations
+    <https://openprescribing.net/bnf/2109/>
+  *    21.10: C.A.P.D. Administration Equipment
+    <https://openprescribing.net/bnf/2110/>
+  *    21.11: Special Authorisation Guernsey
+    <https://openprescribing.net/bnf/2111/>
+  *    21.12: Peak Flow Meters <https://openprescribing.net/bnf/2112/>
+  *    21.13: Catheter Maintenance Products
+    <https://openprescribing.net/bnf/2113/>
+  *    21.14: Lubricant Gels <https://openprescribing.net/bnf/2114/>
+  *    21.16: Irrigation Solutions <https://openprescribing.net/bnf/2116/>
+  *    21.17: Nasal Device <https://openprescribing.net/bnf/2117/>
+  *    21.18: Vacuum Pumps for Erectile Dysfunction
+    <https://openprescribing.net/bnf/2118/>
+  *    21.19: Oral Film Forming Agents
+    <https://openprescribing.net/bnf/2119/>
+  *    21.20: Venous Ulcer Compression System
+    <https://openprescribing.net/bnf/2120/>
+  *    21.21: Dry Mouth Products <https://openprescribing.net/bnf/2121/>
+  *    21.22: Emollients <https://openprescribing.net/bnf/2122/>
+  *    21.23: Vaginal Moisturisers <https://openprescribing.net/bnf/2123/>
+  *    21.24: Nasal Products <https://openprescribing.net/bnf/2124/>
+  *    21.25: Vaginal Dilators <https://openprescribing.net/bnf/2125/>
+  *    21.26: Leg Ulcer Wrap <https://openprescribing.net/bnf/2126/>
+  *    21.27: Lymphoedema Garments <https://openprescribing.net/bnf/2127/>
+  *    21.28: Anal Irrigation System
+    <https://openprescribing.net/bnf/2128/>
+  *    21.29: Pressure Offloading Device
+    <https://openprescribing.net/bnf/2129/>
+  *    21.30: Eye Products <https://openprescribing.net/bnf/2130/>
+  *    21.31: Cycloidal Vibration Accessories
+    <https://openprescribing.net/bnf/2131/>
+  *    21.32: Inhalation Solutions <https://openprescribing.net/bnf/2132/>
+  *    21.33: Indwelling Pleural Cath Drain System
+    <https://openprescribing.net/bnf/2133/>
+  *    21.34: Vaginal PH Correction Products
+    <https://openprescribing.net/bnf/2134/>
+  *    21.35: Acne Treatment <https://openprescribing.net/bnf/2135/>
+  *    21.36: Adhesive Dressing Remover Ster Silicone
+    <https://openprescribing.net/bnf/2136/>
+  *    21.37: Pelvic Toning Devices <https://openprescribing.net/bnf/2137/>
+  *    21.38: Low Friction Products <https://openprescribing.net/bnf/2138/>
+  *    21.39: Prosthetic Adhesives <https://openprescribing.net/bnf/2139/>
+  *    21.40: Bacterial Decolonisation Products
+    <https://openprescribing.net/bnf/2140/>
+  *    21.41: Physical Debridement Device
+    <https://openprescribing.net/bnf/2141/>
+  *    21.42: Jaw Rehabilitation Device
+    <https://openprescribing.net/bnf/2142/>
+  *    21.43: Micro-Enema - Sodium Citrate
+    <https://openprescribing.net/bnf/2143/>
+  *    21.44: Dev For Adjunctive Tt Of Hypertension
+    <https://openprescribing.net/bnf/2144/>
+  *    21.45: Douches <https://openprescribing.net/bnf/2145/>
+  *    21.46: Hernia Support Garments
+    <https://openprescribing.net/bnf/2146/>
+  *    21.47: Dev For Fungal Nail Infections
+    <https://openprescribing.net/bnf/2147/>
+  *    21.48: Detection Sensor Interstitial Fluid/Gluc
+    <https://openprescribing.net/bnf/2148/>
+  *    21.49: Pulsed Electromagnetic Stimulator
+    <https://openprescribing.net/bnf/2149/>
+  * 22: Incontinence Appliances <https://openprescribing.net/bnf/22/>
+  *    22.2: Anal Plugs <https://openprescribing.net/bnf/2202/>
+  *    22.5: Catheter Valves <https://openprescribing.net/bnf/2205/>
+  *    22.10: Drainable Dribbling Appliances
+    <https://openprescribing.net/bnf/2210/>
+  *    22.15: Faecal Collectors <https://openprescribing.net/bnf/2215/>
+  *    22.20: Incontinence Belts <https://openprescribing.net/bnf/2220/>
+  *    22.30: Incontinence Sheaths <https://openprescribing.net/bnf/2230/>
+  *    22.40: Incontinence Sheath Fixing Strips & Adh
+    <https://openprescribing.net/bnf/2240/>
+  *    22.50: Leg Bags <https://openprescribing.net/bnf/2250/>
+  *    22.60: Night Drainage Bags <https://openprescribing.net/bnf/2260/>
+  *    22.70: Suspensory Systems <https://openprescribing.net/bnf/2270/>
+  *    22.80: Tubing And Accessories
+    <https://openprescribing.net/bnf/2280/>
+  *    22.85: Insert For Female Stress Incont
+    <https://openprescribing.net/bnf/2285/>
+  *    22.90: Urinal Systems <https://openprescribing.net/bnf/2290/>
+  * 23: Stoma Appliances <https://openprescribing.net/bnf/23/>
+  *    23.5: Adhesive Discs/Rings/Pads/Plasters
+    <https://openprescribing.net/bnf/2305/>
+  *    23.10: Adhesive (Pastes/Sprays/Solutions)
+    <https://openprescribing.net/bnf/2310/>
+  *    23.15: Adhesive Removers (Sprays/Liquids/Wipes)
+    <https://openprescribing.net/bnf/2315/>
+  *    23.20: Bag Closures <https://openprescribing.net/bnf/2320/>
+  *    23.25: Bag Covers <https://openprescribing.net/bnf/2325/>
+  *    23.30: Belts <https://openprescribing.net/bnf/2330/>
+  *    23.35: Colostomy Bags <https://openprescribing.net/bnf/2335/>
+  *    23.40: Colostomy Sets <https://openprescribing.net/bnf/2340/>
+  *    23.45: Deodorants <https://openprescribing.net/bnf/2345/>
+  *    23.46: Discharge Solidifying Agents
+    <https://openprescribing.net/bnf/2346/>
+  *    23.50: Filters/Bridges <https://openprescribing.net/bnf/2350/>
+  *    23.55: Flanges <https://openprescribing.net/bnf/2355/>
+  *    23.60: Ileostomy Bags <https://openprescribing.net/bnf/2360/>
+  *    23.65: Ileostomy Sets <https://openprescribing.net/bnf/2365/>
+  *    23.70: Irrigation Washout Appliances
+    <https://openprescribing.net/bnf/2370/>
+  *    23.75: Pressure Plates/Shields
+    <https://openprescribing.net/bnf/2375/>
+  *    23.80: Skin Fillers And Protectives
+    <https://openprescribing.net/bnf/2380/>
+  *    23.85: Skin Protectors <https://openprescribing.net/bnf/2385/>
+  *    23.90: Stoma Caps/Dressings <https://openprescribing.net/bnf/2390/>
+  *    23.92: Tubing & Accessories <https://openprescribing.net/bnf/2392/>
+  *    23.93: Accessories (Guernsey)
+    <https://openprescribing.net/bnf/2393/>
+  *    23.94: Two Piece Ostomy Systems
+    <https://openprescribing.net/bnf/2394/>
+  *    23.96: Urostomy Bags <https://openprescribing.net/bnf/2396/>
+  *    23.98: Urostomy Sets <https://openprescribing.net/bnf/2398/>
+  *    23.99: Ostomy Appliances R/Sub Allowed Pre 1985
+    <https://openprescribing.net/bnf/2399/>

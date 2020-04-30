@@ -25,6 +25,7 @@ sub_regions = open (lists_dir_path+'sub_regions.txt').read().split('\n')[:-1]
 sub_regions = ['All']+sub_regions
 def map_plot(data,features_titles, output_choice_selection):
     full_source = ColumnDataSource(data) # a CDS version of the data obtained
+
     # a CDS version of the data to plot, modifiable by geo dropdowns, to be produced in the callback
     num_instances=len(data)
 
@@ -99,7 +100,7 @@ def map_plot(data,features_titles, output_choice_selection):
     plot.add_layout(color_bar, 'right')
     plot.add_tools(hover)
 
-    # Plot widgets 
+    # Plot widgets selection callback
     callback = CustomJS(args=dict(source=source, filter=filter), code='''
       var indices = []
       var selected_value = cb_obj.value

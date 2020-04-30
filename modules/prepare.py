@@ -1,4 +1,9 @@
-def get_tables(df,features):
+def table_names (df,features):
+    '''
+    Identify the relevant tables to query for each feature based on the list of features
+    and the results of the query obtained in a dataframe (df)
+    '''
+
     table_names=[]
     for feature in features:
         year = df.loc[feature,'year']
@@ -23,6 +28,9 @@ def get_tables(df,features):
     return table_names
 
 def validate (df,features):
+    ''' Assert that the query can be executed in the dashboard,
+    otherwise, return an error message'''
+
     error = False
     comment = ''
 
@@ -104,7 +112,10 @@ def validate (df,features):
                             break
     return (error, comment)
 
-def get_title(df):
+def plot_titles (df):
+    ''' For each of the features selected build a title line,
+    return the title lines as a dictionary to be used to build the title in plot.py'''
+    
     import re
     selected_features = set (df.index)
     gender_age = {'gender','age_groups'}
