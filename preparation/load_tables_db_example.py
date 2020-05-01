@@ -8,7 +8,7 @@ import time
 import re
 import os
 
-# connect to database on aws rds: the test database
+# Connect to the database as admin
 conn = psycopg2.connect(
     database=<db_name>,
     user=<admin_user_name>,
