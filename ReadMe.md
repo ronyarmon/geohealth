@@ -18,7 +18,7 @@ Data: [Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-gove
 1. Set up the run time environment by installing [Anaconda](https://docs.anaconda.com/anaconda/install/) or standalone [Python](https://www.python.org/downloads/) followed by the installation of [Jupyter Notebooks](https://jupyter.org/install).
 2. Set up a directory for the project.
 3. Navigate to the directory and clone this repository:  
-git clone https://github.com/ronyarmon/geo_health.git
+git clone https://github.com/ronyarmon/geohealth
 4. Install the projects' dependencies:   
 pip install -r requirements.txt
 5. Open a Jupyter notebook from Anaconda Navigator or open a terminal and run (terminal):  
